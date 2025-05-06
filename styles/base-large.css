@@ -1,0 +1,36 @@
+@media only screen and (min-width: 40em) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
+
+    .navigation a {
+        text-align: center;
+    }
+
+
+
+    #menu {
+        display: none;
+
+    }
+
+    .card1 {
+        white-space: nowrap;
+    }
+
+    #courses {
+        display: grid;
+    }
+}
