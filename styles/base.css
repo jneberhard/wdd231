@@ -113,14 +113,11 @@ body {
 
 }
 
-
 h1 {
     display: grid;
     text-align: left;
     font-size: 32px;
 }
-
-
 
 .navbar1 {
     margin: 0px auto;
