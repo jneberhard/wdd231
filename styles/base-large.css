@@ -34,3 +34,9 @@
         display: grid;
     }
 }
+
+@media screen and (max-width: 768px) {
+    #courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

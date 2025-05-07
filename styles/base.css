@@ -91,16 +91,15 @@ body {
     font-weight: 300;
     text-decoration: none;
     color: white;
-    position: absolute;
+
 
 }
 
 #menu::before {
     content: "≡";
-    position: fixed;
-    padding-top: 0px;
-    right: 0;
-    padding-right: 30px;
+    position: absolute;
+    right: 1em;
+    top: 1em;
 }
 
 #menu.open::before {
@@ -124,7 +123,7 @@ h1 {
 
 
 .navbar1 {
-    margin: 0px, auto;
+    margin: 0px auto;
     list-style: none;
     padding: 15px;
     color: black;
@@ -134,7 +133,7 @@ h1 {
 .card1 {
     grid-template-columns: 2fr 1fr;
     display: grid;
-    column-gap: 30px;
+    column-gap: 10px;
 
 }
 
@@ -175,7 +174,6 @@ li {
 #courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10 px;
     background-color: rgb(237, 234, 234);
     box-shadow: var(--box-shadow);
 }
@@ -213,16 +211,19 @@ li {
     padding: 0;
 }
 
-.location img {
-    padding: 5px;
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    text-align: center;
 }
-
 
 h2 {
     background-color: var(--background-color);
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    max-height: auto;
     text-align: center;
     color: white;
     width: 100%;
