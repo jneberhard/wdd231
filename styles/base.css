@@ -31,7 +31,7 @@ body {
     background-color: var(--background-color);
     font-family: "Noto Serif", serif;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr .5fr;
     position: relative;
     align-items: center;
 }
