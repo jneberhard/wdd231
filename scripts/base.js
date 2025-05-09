@@ -97,7 +97,12 @@ courses.forEach(course => {
 
 
 function displayCourses(filteredCourses) {
+    const creditTotal = document.getElementById('credit-total');
     container.innerHTML = '';
+
+    //calculate credits
+    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+    creditTotal.textContent = `The total number of credits for the courses listed below is ${totalCredits}.`;
 
     filteredCourses.forEach(course => {
         const courseDiv = document.createElement('div');
@@ -125,17 +130,7 @@ function filterCourses(type) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
+//hamburger button on menu
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
