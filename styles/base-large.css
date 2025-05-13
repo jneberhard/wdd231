@@ -5,20 +5,16 @@
         justify-content: space-between;
     }
 
-
-
-    .navigation ul {
+    ul.menuLinks, ul.menuLinks.open {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
-        gap: 2rem;
     }
 
 
-    .navigation a {
-        text-align: center;
-    }
 
+    nav {
+        grid-template-rows: 1fr;
+    }
 
 
     #menu {

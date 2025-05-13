@@ -1,0 +1,28 @@
+{    
+    "last_name": "Brown",
+    "move_in-date": "2025-04-29",
+    "number_in_family": 4,
+    "visit_done": true,    
+    "family_members": [
+        {
+            "first_name": "Robert",
+            "gender": "Male",
+            "birthdate": "1975-02-26"
+        },
+        {
+            "first_name": "Lisa",
+            "gender": "Female",
+            "birthdate": "1977-07-24"  
+        },
+        {
+            "first_name": "Bobby",
+            "gender": "Male",
+            "birthdate": "2001-02-15"
+        },
+        {
+            "first_name": "Henry",
+            "gender": "Male",
+            "birthdate": "2006-08-02"
+        }   
+    ]
+}

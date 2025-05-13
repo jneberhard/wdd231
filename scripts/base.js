@@ -129,10 +129,9 @@ function filterCourses(type) {
     }
 }
 
-
 //hamburger button on menu
 const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+const navigation = document.querySelector('#animateme');
 
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
