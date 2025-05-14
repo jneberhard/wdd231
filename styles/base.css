@@ -110,49 +110,6 @@ nav .open {
     content: "\2630";
 }
 
-/*.open ul {
-    display: flex;
-    max-height: 500px;
-    opacity: 1;
-
-}
-/*.navigation {
-    background-color: #0d0606;
-    width: 100%;
-}
-
-.navigation ul {
-    max-height: 0;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 3px;
-    margin: 0;
-    list-style: none;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-    opacity: 0;
-}
-
-ul {
-    list-style-type: none;
-}
-
-
-
-.navigation li {
-    list-style: none;
-}
-
-.navigation a {
-    color: #eee;
-    text-decoration: none;
-
-}
-
-
-*/
 
 h1 {
     display: grid;

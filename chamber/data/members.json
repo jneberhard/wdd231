@@ -1,0 +1,82 @@
+
+[
+    {    
+        "name": "NuSkin",
+        "addresses": "75 W Center St, Provo, UT 84601",
+        "phone_number": "(800) 487-1000",
+        "website": "https://www.nuskin.com/",    
+        "image": "nuskin.webp",
+        "membership_level": 2,
+        "business_type": "Health and Beauty",
+        "description": "Nu Skin Enterprises, Inc. is an American multilevel marketing company that develops and sells personal care products and dietary and nutritional supplements."
+       
+    },
+
+    {    
+        "name": "Brigham Young University",
+        "addresses": "Brigham Young University, Provo, UT 84602",
+        "phone_number": "(801) 422-4636",
+        "website": "https://www.byu.edu/",    
+        "image": "byu.webp",
+        "membership_level": 2,
+        "business_type": "Education",
+        "description": "Brigham Young University is a private research university."
+       
+    },
+
+    {    
+        "name": "Qualtrics",
+        "addresses": "2333 W. River Park Drive, Provo, UT 84604",
+        "phone_number": "(385) 585-4560",
+        "website": "https://www.qualtrics.com/",    
+        "image": "qualtrics.webp",
+        "membership_level": 2,
+        "business_type": "Computer Software",
+        "description": "Qualtrics is an American experience management company."
+       
+    },
+
+    {    
+        "name": "Utah Valley Hospital",
+        "addresses": "1034 N 500 W, Provo, UT 84604",
+        "phone_number": "(801) 357-7850",
+        "website": "https://intermountainhealthcare.org/locations/utah-valley-hospital?utm_campaign=gmb&utm_medium=organic&utm_source=local",    
+        "image": "hospital.webp",
+        "membership_level": 2,
+        "business_type": "Healthcare",
+        "description": "Utah Valley Hospital is a 395-bed full-service tertiary and acute care referral center serving Utah County, central and southern Utah that is part of the Intermountain Healthcare system."       
+    },
+
+    {    
+        "name": "Franz Bakery",
+        "addresses": "1177 W 100 N, Provo, UT 84601",
+        "phone_number": "(801) 377-2154",
+        "website": "https://www.franzbakery.com/",    
+        "image": "franz.webp",
+        "membership_level": 2,
+        "business_type": "Food",
+        "description": "Long-running (since 1906) family-owned bakery offering a variety of bread, bagels & pastries."      
+    },
+
+    {    
+        "name": "Action Target",
+        "addresses": "3411 Mountain Vista Pkwy, Provo, UT 84606",
+        "phone_number": "(801) 377-8033",
+        "website": "https://www.actiontarget.com/",    
+        "image": "action_target.webp",
+        "membership_level": 2,
+        "business_type": "Manufacturing",
+        "description": "Action Target is a manufacturer of custom shooting ranges and portable steel targets for military, law enforcement, Special Forces groups, tactical training schools, and commercial applications."      
+    },
+
+    {    
+        "name": "Covey Center For the Arts",
+        "addresses": "425 W Center St, Provo, UT 84601",
+        "phone_number": "(801) 852-7007",
+        "website": "https://www.provo.gov/185/Covey-Center-for-the-Arts",    
+        "image": "covey_center.jpg",
+        "membership_level": 2,
+        "business_type": "Performing Arts Venue",
+        "description": "Performance facility with an auditorium, experimental theater space, art galleries & dance studios."     
+    }
+]
