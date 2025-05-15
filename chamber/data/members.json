@@ -20,7 +20,7 @@
         "image": "byu.webp",
         "membership_level": 2,
         "business_type": "Education",
-        "description": "Brigham Young University is a private research university."
+        "description": "Brigham Young University is a private research university. BYU offers a variety of academic programs including those in the liberal arts, engineering, agriculture, management, physical and mathematical sciences, nursing, and law."
        
     },
 
@@ -32,7 +32,7 @@
         "image": "qualtrics.webp",
         "membership_level": 2,
         "business_type": "Computer Software",
-        "description": "Qualtrics is an American experience management company."
+        "description": "Qualtrics is an American experience management company. Qualtrics offers a cloud-based subscription software platform for experience management."
        
     },
 
@@ -55,7 +55,7 @@
         "image": "franz.webp",
         "membership_level": 2,
         "business_type": "Food",
-        "description": "Long-running (since 1906) family-owned bakery offering a variety of bread, bagels & pastries."      
+        "description": "Long-running (since 1906) family-owned bakery offering a variety of bread, bagels & pastries. Our Franz Bakery Outlet here in Provo was chosen in The Daily Herald's 2018 Best Of Utah Valley's Reader's Choice Awards as THE #1 BEST Outlet Store in Utah."      
     },
 
     {    

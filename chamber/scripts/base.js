@@ -1,7 +1,10 @@
 document.getElementById("currentYear").innerHTML = new Date().getFullYear();
 document.getElementById('lastModified').textContent = "Last Modification: " + document.lastModified;
 
-const url = 'https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json';
+
+
+
+const url = 'https://jneberhard.github.io/wdd231/chamber/data/members.json';
 
 
 
@@ -10,8 +13,7 @@ const cards = document.querySelector('#cards');
 async function getCompanyData() {
     const response = await fetch(url); // request
     const data = await response.json(); // parse the JSON data
-    //console.table(data.companiess);
-    displayCompanies(data.companies);
+    displayCompanies(data);
 
   }
   
@@ -22,27 +24,38 @@ const displayCompanies = (companies) => {
     companies.forEach((company) => { 
         let card = document.createElement('section');
         let name = document.createElement("h2");
-        let addresses = document.createElement('p');
-        let phone_number = document.createElement('p');
-        let website = document.createElement('');
+        let address = document.createElement('p');
+        let phone = document.createElement('p');
+        let website = document.createElement('a');
         let image = document.createElement('img');
+        let genre = document.createElement('p');
+        let description = document.createElement('p');
 
 
-        companyName.textContent = `${company.name} `;
-        addresses.textContent = `${company.addresses}`;
-        phone_number.textContent = `${company.phoneNumber}`;
-        website.setAttribute('src', company.imageurl);
-        image.setAttribute('src', company.imageurl);
-        image.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '340');
-        image.setAttribute('height', '440')
+        name.textContent = company.name;
+        address.textContent = company.addresses;
+        phone.textContent = `Phone: ${company.phone_number}`;
+        website.href = company.website;
+        website.textContent = "Company Website";
+        website.target = "_blank";
+        genre.textContent = company.business_type;
+        description.textContent = company.description;
+
+        image.setAttribute('src', `images/${company.image}`);
+        image.setAttribute('alt', `Image for ${company.name}`);
 
         card.appendChild(name);
-        card.appendChild(addresses);
-        card.appendChild(phoneNumber);
+        card.appendChild(address);
+        card.appendChild(phone);
         card.appendChild(website);
         card.appendChild(image);
+        card.appendChild(genre);
+        card.appendChild(description);
+
+
+
         cards.appendChild(card);
     });
-  }
+};
+
+
