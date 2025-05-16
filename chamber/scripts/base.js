@@ -10,7 +10,7 @@ const url = 'https://jneberhard.github.io/wdd231/chamber/data/members.json';
 
 const cards = document.querySelector('#cards');
 const cardView = document.getElementById("cardView");
-const liveView = document.getElementById('listView');
+const listView = document.getElementById('listView');
 
 let companyData = [];
 
@@ -45,8 +45,8 @@ const displayCompanies = (companies) => {
         website.href = company.website;
         website.textContent = "Company Website";
         website.target = "_blank";
-       /* genre.textContent = company.business_type;
-        description.textContent = company.description; */
+        genre.textContent = company.business_type;
+        description.textContent = company.description;
 
         image.setAttribute('src', `images/${company.image}`);
         image.setAttribute('alt', `Image for ${company.name}`);
