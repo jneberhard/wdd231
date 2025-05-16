@@ -106,6 +106,49 @@ main h1 {
     padding-left: 15px;
 }
 
+.toggleView {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.toggleView button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3 s, color 0.3s;
+}
+
+.toggleView button.active {
+    background-color: var(--main-green)
+}
+
+/*-------------------  list view styles --------------------*/
+
+#cards.listView {
+    display: block;
+    background-color: #e4d6d6;
+}
+
+#cards.listView section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    padding-left: 15px;
+    border-bottom: 1px solid black;
+    background-color: #e4d6d6;
+    text-align: left;
+    align-items: center;
+    line-height: auto;
+}
+
+#cards.listView section:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+/*----------------------card view styles ---------------*/
+
 #cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -143,7 +186,8 @@ main h1 {
 }
 
 #cards a {
-    color: black;
+    color: rgb(0, 0, 0);
+    font-size: large;
 
 }
 #cards a:hover {
@@ -158,10 +202,8 @@ main h1 {
 footer {
     background-color: var(--main-green);
     font-family: "Noto Serif", serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    align-items: center;
+    grid-template-columns: 1fr;
+    text-align: center;
 
 }
 
@@ -174,19 +216,18 @@ footer {
 }
 
 .social {
-    display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
   }
 
 .social img {
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
     padding: 20px;
   }
 .social a {
     text-decoration: none;
   }
-
 
 .designer p {
     color: black;

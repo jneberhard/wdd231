@@ -9,11 +9,16 @@ const url = 'https://jneberhard.github.io/wdd231/chamber/data/members.json';
 
 
 const cards = document.querySelector('#cards');
+const cardView = document.getElementById("cardView");
+const liveView = document.getElementById('listView');
+
+let companyData = [];
 
 async function getCompanyData() {
     const response = await fetch(url); // request
     const data = await response.json(); // parse the JSON data
-    displayCompanies(data);
+    companyData = data;
+    displayCompanies(companyData);
 
   }
   
@@ -21,6 +26,8 @@ getCompanyData();
   
 
 const displayCompanies = (companies) => {
+    cards.innerHTML = '';
+
     companies.forEach((company) => { 
         let card = document.createElement('section');
         let name = document.createElement("h2");
@@ -38,8 +45,8 @@ const displayCompanies = (companies) => {
         website.href = company.website;
         website.textContent = "Company Website";
         website.target = "_blank";
-        genre.textContent = company.business_type;
-        description.textContent = company.description;
+       /* genre.textContent = company.business_type;
+        description.textContent = company.description; */
 
         image.setAttribute('src', `images/${company.image}`);
         image.setAttribute('alt', `Image for ${company.name}`);
@@ -51,13 +58,29 @@ const displayCompanies = (companies) => {
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(website);
-        card.appendChild(image);
-        card.appendChild(genre);
-        card.appendChild(description);
 
-
+        if (!cards.classList.contains("listView")) {
+            card.appendChild(image);
+            card.appendChild(genre);
+            card.appendChild(description);
+        }
 
         cards.appendChild(card);
     });
 };
 
+
+
+cardView.addEventListener('click', () => {
+    cards.classList.remove('listView');
+    cardView.classList.add('active');
+    listView.classList.remove('active')
+    displayCompanies(companyData);
+});
+
+listView.addEventListener('click', () => {
+    cards.classList.add('listView');
+    listView.classList.add('active');
+    cardView.classList.remove('active')
+    displayCompanies(companyData);
+});
