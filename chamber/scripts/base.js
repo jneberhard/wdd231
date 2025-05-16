@@ -50,7 +50,6 @@ const displayCompanies = (companies) => {
 
         image.setAttribute('src', `images/${company.image}`);
         image.setAttribute('alt', `Image for ${company.name}`);
-        image.setAttribute('loading', 'lazy');
         image.style.maxHeight = '200px';
         image.style.width = 'auto';
 
