@@ -116,7 +116,6 @@ main h1 {
     padding: 5px 10px;
     font-size: 15px;
     cursor: pointer;
-    transition: background-color 0.3 s, color 0.3s;
 }
 
 .toggleView button.active {
@@ -138,7 +137,6 @@ main h1 {
     background-color: #e4d6d6;
     text-align: left;
     align-items: center;
-    line-height: auto;
 }
 
 #cards.listView section:nth-child(even) {
