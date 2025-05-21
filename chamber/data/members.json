@@ -18,7 +18,7 @@
         "phone_number": "(801) 422-4636",
         "website": "https://www.byu.edu/",    
         "image": "byu.webp",
-        "membership_level": 2,
+        "membership_level": 1,
         "business_type": "Education",
         "description": "Brigham Young University is a private research university. BYU offers a variety of academic programs including those in the liberal arts, engineering, agriculture, management, physical and mathematical sciences, nursing, and law."
        
@@ -42,7 +42,7 @@
         "phone_number": "(801) 357-7850",
         "website": "https://intermountainhealthcare.org/locations/utah-valley-hospital?utm_campaign=gmb&utm_medium=organic&utm_source=local",    
         "image": "hospital.webp",
-        "membership_level": 2,
+        "membership_level": 1,
         "business_type": "Healthcare",
         "description": "Utah Valley Hospital is a 395-bed full-service tertiary and acute care referral center serving Utah County, central and southern Utah that is part of the Intermountain Healthcare system."       
     },
@@ -53,7 +53,7 @@
         "phone_number": "(801) 377-2154",
         "website": "https://www.franzbakery.com/",    
         "image": "franz.webp",
-        "membership_level": 2,
+        "membership_level": 3,
         "business_type": "Food",
         "description": "Long-running (since 1906) family-owned bakery offering a variety of bread, bagels & pastries. Our Franz Bakery Outlet here in Provo was chosen in The Daily Herald's 2018 Best Of Utah Valley's Reader's Choice Awards as THE #1 BEST Outlet Store in Utah."      
     },
@@ -75,7 +75,7 @@
         "phone_number": "(801) 852-7007",
         "website": "https://www.provo.gov/185/Covey-Center-for-the-Arts",    
         "image": "covey_center.jpg",
-        "membership_level": 2,
+        "membership_level": 1,
         "business_type": "Performing Arts Venue",
         "description": "Performance facility with an auditorium, experimental theater space, art galleries & dance studios."     
     }

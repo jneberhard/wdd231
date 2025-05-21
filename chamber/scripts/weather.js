@@ -44,8 +44,8 @@ function displayResults(data) {
     weatherIcon.setAttribute('alt', data.weather[0].description);
     captionDiscr.textContent = data.weather[0].description;
     currentTemp.innerHTML = `${Math.round(data.main.temp)}&deg;F`   /*source: https://stackoverflow.com/questions/64489039/temperature-without-decimals-21-01-21 */
-    todayHigh.innerHTML = `High: ${Math.round(data.main.temp_max)}&deg;F`
-    todayLow.innerHTML = `Low: ${Math.round(data.main.temp_min)}&deg;F`
+
+    
     humidity.innerHTML = `Humidity: ${data.main.humidity}%`
 
     const sunriseTime = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], {    /*source:https://stackoverflow.com/questions/17913681/how-do-i-use-tolocaletimestring-without-displaying-seconds   times by 1000 to get milliseconds for correct timing after Jan 1 1970*/
@@ -62,7 +62,7 @@ function displayResults(data) {
     sunrise.innerHTML = `Sunrise: ${sunriseTime}`
     sunset.innerHTML = `Sunset: ${sunsetTime}`
 
-    forecastHigh.innerHTML = `Today: ${Math.round(data.main.temp_max)}&deg;F`
+    
 
     
 }
@@ -90,9 +90,50 @@ apiFetchFuture();
 function displayForecast(data) {
     const forecastList = data.list;
 
-    const forecastTomorrow = forecastList[8];
-    const forecastTwoday = forecastList[16];
 
-    tomorrowHigh.innerHTML = `Tomorrow: ${Math.round(forecastTomorrow.main.temp_max)}&deg;F`
-    twodayHigh.innerHTML =`2 day: ${Math.round(forecastTwoday.main.temp_max)}&deg;F`
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+
+    const twoDay = new Date(today);
+    twoDay.setDate(today.getDate() + 2);
+
+    let maxToday = -Infinity;
+    let maxTomorrow = -Infinity;
+    let maxTwoDay = -Infinity;
+    let minToday = Infinity;
+
+    forecastList.forEach(item => {
+        const itemDate = new Date(item.dt_txt);
+
+        if (itemDate.getDate() === today.getDate() && itemDate.getDay() === today.getDay()) {
+            maxToday = Math.max(maxToday, item.main.temp_max);
+        }
+
+        if (itemDate.getDate() === tomorrow.getDate() && itemDate.getDay() === tomorrow.getDay()) {
+            maxTomorrow = Math.max(maxTomorrow, item.main.temp_max);
+        }
+
+        if (itemDate.getDate() === twoDay.getDate() && itemDate.getDay() === twoDay.getDay()) {
+            maxTwoDay = Math.max(maxTwoDay, item.main.temp_max);
+        }
+        if (itemDate.getDate() === today.getDate() && itemDate.getDay() === today.getDay()) {
+            minToday = Math.min(minToday, item.main.temp_min);
+        }
+
+
+
+    })
+    const day0 = weekday[today.getDay()];
+    const day1 = weekday[tomorrow.getDay()];
+    const day2 = weekday[twoDay.getDay()];
+
+    forecastHigh.innerHTML = `${day0}: ${Math.round(maxToday)}&deg;F`
+    tomorrowHigh.innerHTML = `${day1}: ${Math.round(maxTomorrow)}&deg;F`
+    twodayHigh.innerHTML = `${day2}: ${Math.round(maxTwoDay)}&deg;F`
+    todayHigh.innerHTML = `High: ${Math.round(maxToday)}&deg;F`
+    todayLow.innerHTML = `Low: ${Math.round(minToday)}&deg;F`
 }
+
+//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_date_weekday
