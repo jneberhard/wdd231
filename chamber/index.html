@@ -16,6 +16,7 @@
     <title>Provo City</title>
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/base.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Provo Chamber of Commerce">
     <meta property="og:description" content="Businesses within the city of Provo, Utah that are supported by the Chamber of Commerce.">
@@ -44,7 +45,43 @@
     </header>
 
     <main>
-        <p>Provo Chamber of Commerce</p>
+        <div class="hero">
+            <img src="images/provo1.webp" alt="Provo" >
+            <h1>Home</h1>
+        </div>
+        <section class="info-main">
+            <div class="events">
+                <h2>Events</h2>
+                <p>Current events shown here.</p>
+            </div>
+            <div class="weather">
+                <h2>Current Weather</h2>
+                <figure>
+                    <img id="weather-icon" src="" alt="">
+                </figure>
+                <div class="details">
+                    <span id="current-temp"></span>
+                    <figcaption></figcaption>
+                    <span id="today-high"></span>
+                    <span id="today-low"></span>
+                    <span id="humidity"></span>
+                    <span id="sunrise"></span>
+                    <span id="sunset"></span>
+                </div>
+            </div>
+            <div class="forecast">
+                <h2>Weather Forecast</h2>
+                <div class = forecast-day>
+                    <span id="forecast-high"></span>
+                    <span id="tomorrow-high"></span>
+                    <span id="twoday-high"></span>
+                </div>
+
+            </div>
+        </section>
+        <section class="spotlight">
+            <p> Spotlight 3 cards here.   </p>
+        </section>
         
     </main>
 

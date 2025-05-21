@@ -1,0 +1,24 @@
+.card {
+    border: 1px solid blue;
+    background-color: bisque;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card p {
+    color: black;
+    margin: .3rem 0;
+}
+
+.card #current-temp {
+    font-size: 3rem;
+    color:blue;
+    margin: .3rem 0;
+}
+
+.card figcaption {
+    text-transform: capitalize;
+    color: blueviolet;
+    font-size: xx-large;
+    font-weight: bold;
+}
