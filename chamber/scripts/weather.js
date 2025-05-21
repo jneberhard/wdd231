@@ -44,8 +44,6 @@ function displayResults(data) {
     weatherIcon.setAttribute('alt', data.weather[0].description);
     captionDiscr.textContent = data.weather[0].description;
     currentTemp.innerHTML = `${Math.round(data.main.temp)}&deg;F`   /*source: https://stackoverflow.com/questions/64489039/temperature-without-decimals-21-01-21 */
-
-    
     humidity.innerHTML = `Humidity: ${data.main.humidity}%`
 
     const sunriseTime = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], {    /*source:https://stackoverflow.com/questions/17913681/how-do-i-use-tolocaletimestring-without-displaying-seconds   times by 1000 to get milliseconds for correct timing after Jan 1 1970*/
@@ -61,9 +59,6 @@ function displayResults(data) {
 
     sunrise.innerHTML = `Sunrise: ${sunriseTime}`
     sunset.innerHTML = `Sunset: ${sunsetTime}`
-
-    
-
     
 }
 
@@ -107,24 +102,31 @@ function displayForecast(data) {
     forecastList.forEach(item => {
         const itemDate = new Date(item.dt_txt);
 
-        if (itemDate.getDate() === today.getDate() && itemDate.getDay() === today.getDay()) {
+        const itemYear = itemDate.getFullYear();
+        const itemMonth = itemDate.getMonth()
+        const itemDay = itemDate.getDate();
+
+        if (itemYear === today.getFullYear() &&
+            itemMonth === today.getMonth() &&
+            itemDay === itemDate.getDate()) {
             maxToday = Math.max(maxToday, item.main.temp_max);
-        }
-
-        if (itemDate.getDate() === tomorrow.getDate() && itemDate.getDay() === tomorrow.getDay()) {
-            maxTomorrow = Math.max(maxTomorrow, item.main.temp_max);
-        }
-
-        if (itemDate.getDate() === twoDay.getDate() && itemDate.getDay() === twoDay.getDay()) {
-            maxTwoDay = Math.max(maxTwoDay, item.main.temp_max);
-        }
-        if (itemDate.getDate() === today.getDate() && itemDate.getDay() === today.getDay()) {
             minToday = Math.min(minToday, item.main.temp_min);
         }
 
+        if (itemYear === tomorrow.getFullYear() &&
+            itemMonth === tomorrow.getMonth() &&
+            itemDay === tomorrow.getDate()) {
+            maxTomorrow = Math.max(maxTomorrow, item.main.temp_max);
+        }
 
+        if (itemYear === twoDay.getFullYear() &&
+            itemMonth === twoDay.getMonth() &&
+            itemDay === twoDay.getDate()) {
+            maxTwoDay = Math.max(maxTwoDay, item.main.temp_max);
+        }
 
-    })
+    });
+    
     const day0 = weekday[today.getDay()];
     const day1 = weekday[tomorrow.getDay()];
     const day2 = weekday[twoDay.getDay()];
