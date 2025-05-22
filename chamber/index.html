@@ -17,6 +17,7 @@
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/base.js" defer></script>
     <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Provo Chamber of Commerce">
     <meta property="og:description" content="Businesses within the city of Provo, Utah that are supported by the Chamber of Commerce.">
@@ -32,7 +33,7 @@
             <h1>Provo City</h1>
             <p>Chamber of Commerce</p>
         </div>
-        <button id="menu"></button>
+        <button id="menu" title="Menu"></button>
         <nav id="navMenu">
             <ul class="menuLinks">
                 <li><a href="index.html">Home</a></li>
@@ -47,6 +48,7 @@
     <main>
         <div class="hero">
             <img src="images/provo1.webp" alt="Provo" >
+            <button class=join-button onclick="window.location.href='https://jneberhard.github.io/wdd231/chamber/join.html';">Join the Chamber</button>
             <h1>Home</h1>
         </div>
         <section class="info-main">
@@ -61,11 +63,11 @@
             <div class="weather">
                 <h2>Current Weather</h2>
                 <figure>
-                    <img id="weather-icon" src="" alt="">
+                    <img id="weather-icon" src="https://via.placeholder.com/100x100?text=Icon" alt="Weather icon">
+                    <figcaption id="fig"></figcaption>
                 </figure>
                 <div class="details">
                     <span id="current-temp"></span>
-                    <figcaption></figcaption>
                     <span id="today-high"></span>
                     <span id="today-low"></span>
                     <span id="humidity"></span>
@@ -84,7 +86,8 @@
             </div>
         </section>
         <section class="spotlight1">
-            <div id="spotlight"></div>
+            <h3>Featured Businesses</h3>
+            <div id="spotlight2"></div>
         </section>
         
     </main>
