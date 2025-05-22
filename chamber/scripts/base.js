@@ -16,6 +16,7 @@ const listView = document.getElementById('listView');
 let companyData = [];
 
 async function getCompanyData() {
+    if (!cards) return;
     const response = await fetch(url); // request
     const data = await response.json(); // parse the JSON data
     companyData = data;
@@ -68,29 +69,29 @@ const displayCompanies = (companies) => {
 
 getCompanyData();
 
+if (cardView && listView) {
+    cardView.addEventListener('click', () => {
+        cards.classList.remove('listView');
+        cardView.classList.add('active');
+        listView.classList.remove('active')
+        displayCompanies(companyData);
+    });
 
-cardView.addEventListener('click', () => {
-    cards.classList.remove('listView');
-    cardView.classList.add('active');
-    listView.classList.remove('active')
-    displayCompanies(companyData);
-});
-
-listView.addEventListener('click', () => {
-    cards.classList.add('listView');
-    listView.classList.add('active');
-    cardView.classList.remove('active')
-    displayCompanies(companyData);
-});
+    listView.addEventListener('click', () => {
+        cards.classList.add('listView');
+        listView.classList.add('active');
+        cardView.classList.remove('active')
+        displayCompanies(companyData);
+    });
+}
 
 
-
-document.addEventListeneer("DOMContentLoaded", () => {
-    const currentPath = window.location.pathname.split('/').toUpperCase();
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.split('/').pop().toUpperCase();
     const navLinks = document.querySelectorAll('nav ul li a');
 
     navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPath) {   //checks to see what page it's on
+        if (link.getAttribute("href").toUpperCase === currentPath) {   //checks to see what page it's on
             link.classList.add("active")
         }
     });
