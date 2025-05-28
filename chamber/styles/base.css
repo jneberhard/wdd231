@@ -38,6 +38,7 @@ header {
     padding: 15px;
     height: auto;
     width: 100%;
+    display: block;
 }
 
 .center {
