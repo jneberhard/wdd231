@@ -16,7 +16,7 @@
 
 * {
     box-sizing: border-box;
-    max-width: 100%;
+
 
 }
 body {
@@ -36,9 +36,8 @@ header {
 /* --------------------------- header left ----------*/
 .left img {
     padding: 15px;
-    height: auto;
-    width: 100%;
-    display: block;
+    height: 100px;
+    width: auto;
 }
 
 .center {
