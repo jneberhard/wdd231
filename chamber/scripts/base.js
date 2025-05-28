@@ -87,7 +87,8 @@ if (cardView && listView) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const currentPath = window.location.pathname.split('/').pop().toUpperCase();
+    let currentPath = window.location.pathname.split('/').pop().toUpperCase();
+    if (currentPath === "") currentPath = "index.html";
     const navLinks = document.querySelectorAll('nav ul li a');
 
     navLinks.forEach(link => {
