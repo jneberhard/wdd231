@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll('nav ul li a');
 
     navLinks.forEach(link => {
-        if (link.getAttribute("href").toUpperCase === currentPath) {   //checks to see what page it's on
+        if (link.getAttribute("href").toUpperCase() === currentPath) {   //checks to see what page it's on
             link.classList.add("active")
         }
     });

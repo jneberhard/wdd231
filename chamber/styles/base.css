@@ -15,7 +15,8 @@
 }
 
 * {
-    max-width: 1500px;
+    box-sizing: border-box;
+    max-width: 100%;
 
 }
 body {
