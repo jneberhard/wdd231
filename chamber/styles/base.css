@@ -303,6 +303,86 @@ main h1 {
 
 }
 
+/* -------------------------- Join ppage -------------------------------*/
+.card1 {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    column-gap: 10px;
+
+}
+
+label.inline{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+lable.inline select, label.inline textarea {
+    flex: 1;
+    max-width: 95%;
+}
+
+#chamberForm form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#mydialog div {
+    display:grid;
+    grid-template-columns: auto 44px;
+    background-color: #ddd;
+    padding: 5px;
+    border-bottom: #aaa 1px solid;
+}
+
+#mydialog h2 {
+    margin: 0;
+    color: #275690;
+}
+
+#mydialog button {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #aaa;
+}
+
+#mydialog p {
+    padding: 10px;
+    color: #375170
+}
+
+::backdrop {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+#showHere {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+    box-shadow: 2px 2px 10px (rgba(0,0,0,0.1));
+    transition: transform 0.2s ease;
+    background-color: var(--background-color);
+
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
 
 
 /* -----------------------------------------footer info ----------------------------------*/

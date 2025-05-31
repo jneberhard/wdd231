@@ -82,6 +82,8 @@ const courses = [
     }
 ]
 const container = document.getElementById('courses');
+const courseDetails = document.querySelector("#course-details")
+const creditTotal = document.getElementById('credit-total');
 
 courses.forEach(course => {
     const courseDiv = document.createElement('div');
@@ -97,7 +99,6 @@ courses.forEach(course => {
 
 
 function displayCourses(filteredCourses) {
-    const creditTotal = document.getElementById('credit-total');
     container.innerHTML = '';
 
     //calculate credits
@@ -111,6 +112,10 @@ function displayCourses(filteredCourses) {
         courseDiv.innerHTML = `
             <div class="course-title">${course.subject} ${course.number}</div>
         `;
+
+        courseDiv.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
 
         container.appendChild(courseDiv);
     });
@@ -137,3 +142,26 @@ hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
     hamButton.classList.toggle('open');
 });
+
+
+// course description
+
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="closeModal" aria-label = "Close Dialog" title="Close">X</button>
+        <div class='modal-header'>
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+        </div>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+         `;
+    courseDetails.showModal();
+    const closeModal = document.querySelector("#closeModal");
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
