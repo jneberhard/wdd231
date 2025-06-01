@@ -240,7 +240,7 @@ main h1 {
     position: absolute;
     background-color: var(--main-green);
     top: 55%;
-    left: 70%;
+    left: 65%;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
