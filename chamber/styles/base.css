@@ -19,6 +19,16 @@
 
 
 }
+
+main, section, header, footer {
+    overflow-x: hidden;
+}
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {
     padding: 10px;
 
@@ -71,6 +81,8 @@ li a {
 #navMenu.open {
     max-height: 500px;
 }
+
+
 
 .menuLinks.open {
     display: flex;
@@ -144,7 +156,7 @@ main h1 {
 
 #cards.listView section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr;
     padding-left: 15px;
     border-bottom: 1px solid black;
     background-color: #e4d6d6;
