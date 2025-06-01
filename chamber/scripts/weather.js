@@ -215,57 +215,51 @@ async function apiFetchFuture() {
 }
 apiFetchFuture();
 
+
 function displayForecast(data) {
     const forecastList = data.list;
 
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
-
-    const twoDay = new Date(today);
-    twoDay.setDate(today.getDate() + 2);
 
     let maxToday = -Infinity;
+    let minToday = Infinity;
     let maxTomorrow = -Infinity;
     let maxTwoDay = -Infinity;
-    let minToday = Infinity;
 
-    forecastList.forEach(item => {
-        const itemDate = new Date(item.dt_txt);
+    for (let i = 0; i < forecastList.length; i++) {
+        const tempMax = forecastList[i].main.temp_max;
+        const tempMin = forecastList[i].main.temp_min;
 
-        const itemYear = itemDate.getFullYear();
-        const itemMonth = itemDate.getMonth()
-        const itemDay = itemDate.getDate();
-
-        if (itemYear === today.getFullYear() &&
-            itemMonth === today.getMonth() &&
-            itemDay === itemDate.getDate()) {
-            maxToday = Math.max(maxToday, item.main.temp_max);
-            minToday = Math.min(minToday, item.main.temp_min);
+        if (i < 8) {
+            maxToday = Math.max(maxToday, tempMax);
+            minToday = Math.min(minToday, tempMin);
+        } else if (i < 16) {
+            maxTomorrow = Math.max(maxTomorrow, tempMax);
+        } else if (i < 24) {
+            maxTwoDay = Math.max(maxTwoDay, tempMax);
         }
+    }
 
-        if (itemYear === tomorrow.getFullYear() &&
-            itemMonth === tomorrow.getMonth() &&
-            itemDay === tomorrow.getDate()) {
-            maxTomorrow = Math.max(maxTomorrow, item.main.temp_max);
-        }
+    const today = new Date();
+    const tomorrow = new Date();
+    const twoDay = new Date();
 
-        if (itemYear === twoDay.getFullYear() &&
-            itemMonth === twoDay.getMonth() &&
-            itemDay === twoDay.getDate()) {
-            maxTwoDay = Math.max(maxTwoDay, item.main.temp_max);
-        }
+    tomorrow.setDate(today.getDate() + 1);
+    twoDay.setDate(today.getDate() + 2);
 
-    });
-    
     const day0 = weekday[today.getDay()];
     const day1 = weekday[tomorrow.getDay()];
     const day2 = weekday[twoDay.getDay()];
 
-    forecastHigh.innerHTML = `${day0}: ${Math.round(maxToday)}&deg;F`
-    tomorrowHigh.innerHTML = `${day1}: ${Math.round(maxTomorrow)}&deg;F`
-    twodayHigh.innerHTML = `${day2}: ${Math.round(maxTwoDay)}&deg;F`
-    todayHigh.innerHTML = `High: ${Math.round(maxToday)}&deg;F`
-    todayLow.innerHTML = `Low: ${Math.round(minToday)}&deg;F`
+    if (isFinite(maxToday)) {
+        forecastHigh.innerHTML = `${day0}: ${Math.round(maxToday)}&deg;F`;
+        todayHigh.innerHTML = `High: ${Math.round(maxToday)}&deg;F`;
+        todayLow.innerHTML = `Low: ${Math.round(minToday)}&deg;F`;
+    }
+    if (isFinite(maxTomorrow)) {
+        tomorrowHigh.innerHTML = `${day1}: ${Math.round(maxTomorrow)}&deg;F`;
+    }
+    if (isFinite(maxTwoDay)) {
+        twodayHigh.innerHTML = `${day2}: ${Math.round(maxTwoDay)}&deg;F`;
+    }
 }
