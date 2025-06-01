@@ -222,9 +222,9 @@ function displayForecast(data) {
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
     let maxToday = -Infinity;
-    let minToday = Infinity;
     let maxTomorrow = -Infinity;
     let maxTwoDay = -Infinity;
+    let minToday = Infinity;
 
     for (let i = 0; i < forecastList.length; i++) {
         const tempMax = forecastList[i].main.temp_max;
@@ -233,9 +233,11 @@ function displayForecast(data) {
         if (i < 8) {
             maxToday = Math.max(maxToday, tempMax);
             minToday = Math.min(minToday, tempMin);
-        } else if (i < 16) {
+        }
+        else if (i < 16) {
             maxTomorrow = Math.max(maxTomorrow, tempMax);
-        } else if (i < 24) {
+        }
+        else if (i < 24) {
             maxTwoDay = Math.max(maxTwoDay, tempMax);
         }
     }
