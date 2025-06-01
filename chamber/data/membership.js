@@ -2,26 +2,30 @@ export const membership = [
     {
         "level": "Gold",
         "price": "$1,000/year",
-        "benefits": "put benefits here",
-        "path": "images/gold.jpg"
+        "benefits": "<br>Rotating spotlight on Chamber Home page<br>Member-to-Member discounts<br>Participation in networking events<br>Free tickets to Gold Level events<br>Listing on Website <br>Access to Chamber meetings",
+        "path": "images/gold.jpg",
+        "stars": 4
     },
     {
         "level": "Silver",
         "price": "$500/year",
-        "benefits": "put benefits here",
-        "path": "images/silver.jpg"
+        "benefits": "<br>Enhanced Directory Listing <br>Website Advertising<br>e-blasts to members<br>Limited free tickets to events<br>Listing on Website <br>Access to Chamber meetings",
+        "path": "images/silver.jpg",
+        "stars": 3
     },
     {
         "level": "Bronze",
         "price": "$250/year",
-        "benefits": "put benefits here",
-        "path": "images/bronze.jpg"
+        "benefits": "<br>Access to events at a discounted rate <br>Directory Listing<br>Access to Chamber meetings",
+        "path": "images/bronze.jpg",
+        "stars": 2
     },
     {
-        "level": "NP",
+        "level": "Non-Profit",
         "price": "No charge",
-        "benefits": "put benefits here",
-        "path": "images/np.jpg"
+        "benefits": "<br>Directory Listing <br>Access to Chamber meetings",
+        "path": "images/np.jpg",
+        "stars":1
     }
     
 ];

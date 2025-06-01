@@ -54,6 +54,12 @@
         box-shadow: 0 12px 32px rgba(107, 90, 90, 0.15);
         border: 5px solid black;
     }
+    .card1 {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    column-gap: 10px;
+
+}
 
 }
 

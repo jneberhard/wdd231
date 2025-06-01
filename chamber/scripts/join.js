@@ -1,8 +1,8 @@
 //------------------------ Join Page -----------------//
 
 
-import { membership, url } from '../data/membership.js'
-//console.log(temples)
+import {membership} from '../data/membership.js'
+
 
 const showHere = document.querySelector("#showHere")
 const mydialog = document.querySelector("#mydialog")
@@ -29,9 +29,19 @@ function displayItems(data) {
         const title = document.createElement('h3');
         title.textContent = x.level;
 
+        const starContainer = document.createElement("div");
+        starContainer.classList.add("star-container");
+
+        for (let i = 0; i < x.stars; i++) {
+            const star = document.createElement('span');
+            star.classList.add('star');
+            star.textContent = "⭐";
+            starContainer.appendChild(star);
+        }
+
         card.appendChild(photo);
         card.appendChild(title);
-
+        card.appendChild(starContainer);
         showHere.appendChild(card);
 
     });  // end loop
@@ -49,3 +59,10 @@ function showStuff(x) {
 
 ///start displaying allitems in the json file
 displayItems(membership)
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+const timestamp = new Date().toISOString();
+document.getElementById('timestamp').value = timestamp;
+});

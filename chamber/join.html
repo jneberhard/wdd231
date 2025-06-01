@@ -16,7 +16,7 @@
     <title>Provo City</title>
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/base.js" defer></script>
-    <script src="scripts/join.js" defer></script>
+    <script src="scripts/join.js" type="module"></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Provo Chamber of Commerce">
     <meta property="og:description" content="Businesses within the city of Provo, Utah that are supported by the Chamber of Commerce.">
@@ -38,7 +38,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html" title="Discover">Discover</a></li>
                 <li><a href="directory.html" title="Directory">Business Directory</a></li>
-                <li><a href="join.html" title="Join">Join</a></li>                
+                <li><a href="join.html" title="Join" class="active">Join</a></li>                
             </ul>
         </nav>
     </header>
@@ -48,14 +48,15 @@
             <section id="chamberForm">
             <h2>Join the Chamber</h2>
             <form method="GET" action="thankyou.html" class="designOne">
-                <label>First Name: <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-                <label>Last Name: <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-                <label>Applicants Title: <input type="organization-title" name="organization-title"  autocomplete="organization-title" title="Your Job Title" placeholder="Your Job Title" ></label>
-                <label>Email: <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
-                <label>Phone: <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
-                <label>Business Name: <input type="text" name="organization"  autocomplete="organization" title="Your Organization Name" placeholder="Your Organization Name" ></label>
-                <label for="membership" class="inline">Membership Level:
-                    <select name="membership" id="membership"required>
+                <label>First Name: <span class="required">*</span><input type="text"  name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name: <span class="required">*</span><input type="text"  name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                <label>Applicants Title: <input type="text" name="organization-title"  autocomplete="organization-title" title="Your Job Title" placeholder="Your Job Title" ></label>
+                <label>Email: <span class="required">*</span><input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Phone: <span class="required">*</span><input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                <label>Business Name: <span class="required">*</span><input type="text" required name="organization"  autocomplete="organization" title="Your Organization Name" placeholder="Your Organization Name" ></label>
+                <label for="membership" class="inline">Membership Level:<span class="required">*</span>
+                    <select name="membership" id="membership" required>
+                        <option value="" disabled selected>Select a membership level</option>
                         <option value="Gold">Gold Membership</option>
                         <option value="Silver">Silver Membership</option>
                         <option value="Bronze">Bronze Membership</option>
@@ -63,16 +64,10 @@
                     </select>
                 </label>
                 <label class="inline">Business Description:
-                    <textarea name="description" id="description"  autocomplete="description" title="Description" placeholder="Tell us about your business....." ></textarea>
+                    <textarea name="description" id="description"  title="Description" placeholder="Tell us about your business....." ></textarea>
                 </label>
-            <!-- <h3>Select Ordinance</h3>
-                <label><input type="radio" name="ordinance" value="Baptism" checked> Proxy Baptism</label>
-                <label><input type="radio" name="ordinance" value="Initiatory"> Proxy Initiatory</label>
-                <label><input type="radio" name="ordinance" value="Endowment"> Proxy Endowment</label>
-                <label><input type="radio" name="ordinance" value="Sealing"> Proxy Sealing</label>
-        -->
                 <input type="hidden" name="timestamp" id="timestamp">
-                <input type="submit" value="Join Now">
+                <input type="submit" value="Join the Chamber" id="join-button1">
             </form>
             </section>
             <section id="memberhipLevels">
