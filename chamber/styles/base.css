@@ -274,6 +274,10 @@ main h1 {
     margin: 0;
 }
 
+.eventList {
+    padding: 10px;
+}
+
 .weather {
     display: grid;
     grid-template-columns: 1fr 2fr;
