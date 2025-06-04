@@ -1,0 +1,88 @@
+:root {
+  --background-color: rgb(87, 99, 109);
+  /*paynes' gray */
+  --primary-color-transparent: rgba(87, 99, 109, .5);
+  --secondary-color: rgb(198, 216, 211);
+  /*Ash Gray*/
+  --secondary-color-transparent: rgba(198, 216, 211, .85);
+  /*Ash Gray*/
+  --transparent-white: RGBA(255, 255, 255, .75);
+  --color-gold: rgb(187, 159,6);
+  --color-purple: rgb(28, 11, 25);
+  --color-lightblue: rgb(216, 229, 241);
+  /*Use the gold  and purple  sparingly for accents, calls to action, or highlights.*/
+  --font-Serif: "Noto Serif", serif;
+  --font: "Mulish";
+  --font-roboto: "Roboto";
+  --font-garamond: "EB Garamond", serif;
+  --padding-top: 10px;
+}
+
+* {
+  margin: 0 auto;
+  padding: 5px;
+  box-sizing: border-box;
+  max-width: 1200px;
+
+}
+
+body {
+  font-family: "Roboto", "Mulish", sans-serif;
+  margin: 0 auto;
+}
+
+header {
+  font-family: var(--font-Serif);
+  display: flex;
+  grid-template-columns: 50px .5fr 4fr;
+  align-items: center;
+  background-color: var(--background-color);
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  position: relative;
+  justify-content: space-around;
+}
+
+
+h1 {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  font-family: var(--font-garamond);
+}
+
+h2 {
+    background-color: var(--background-color);
+    color: white;
+    font-family: var(--font-garamond);
+}
+
+#paynes {
+    background-color: var(--background-color);
+    color: white;
+}
+
+#gold {
+    color: var(--color-gold);
+    font-size: 2rem;
+}
+
+#purple {
+    color: var(--color-purple);
+    background-color: var(--color-lightblue);
+}
+
+#garamond {
+    font-family: var(--font-garamond);
+
+}
+#mulish {
+    font-family: var(--font)
+}
+#noto {
+    font-family: var(--font-Serif);
+}
+#roboto{
+    font-family: var(--font-roboto);
+}
