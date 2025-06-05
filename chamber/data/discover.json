@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Splash Summit Water Park",
+        "address": "1330 E 300 N, Provo, UT",
+        "image": "splash_summit.webp",
+        "description": "Water park with a wave pool, lazy river, slides, and food.",
+        "paragraph": "Splash Summit Waterpark is Utah’s premier waterpark!  With over 15 different water play areas, slides and pools, Splash Summit Waterpark is the perfect summertime destination!  Come enjoy the all-new Rainforest River or relax by the wave pool while enjoying Dole Whip. Rent out the newly-remodeled Silicon Signs VIP Lounge for you and your friends!",
+        "image_figure": "Various Slides at Splash Summit"
+    },
+
+    {
+        "name": "Peaks Ice Arena",
+        "address": "100 N Seven Peaks Boulevard, Provo, UT",
+        "image": "peaks_arena.webp",
+        "description": "Indoor ice hocky and figure skating arena.",
+        "paragraph": "Peaks Ice Arena is the place to be for ice sports, skating, and family fun all year long. Our Public Skate sessions provide a fantastic chance for friends and families to enjoy the ice together, with a fun, friendly atmosphere for skaters of all levels.",
+        "image_figure": "Peaks Ice Arena"
+    },
+    {
+        "name": "Bean Life Science Museum",
+        "address": "645 E Phillips Ln, Provo, UT",
+        "image": "bean_museum.webp",
+        "description": "The Monte L. Bean Life Science Museum is a natural history museum housed at Brigham Young University.",
+        "paragraph": "The Bean Life Science Museum maintains a collection of vascular and non vascular plants, invertebrate and vertebrate animals are maintained and made available to research scientists and educators. Open to the public and encourages K-12 school field trips.",
+        "image_figure": "Elephant located inside the Bean Museum."
+    },
+    {
+        "name": "Utah Lake State Park",
+        "address": "4400 W Center St, Provo, UT",
+        "image": "state_park.webp",
+        "description": "State Park on the East shore of Utah Lake.",
+        "paragraph": "Located in Western Provo has camping spots, picnic areas, and launch areas for Utah Lake. Nearby trails on the Provo River and the Provo River Delta offers scenic views. Wildlife, birds, fish, and of course insects and mosquitos are plentiful.",
+        "image_figure": "Provo Bay looking East towards the mountains."
+    },
+    {
+        "name": "Bridal Veil Falls",
+        "address": "Provo Canyon (Hwy. 189)",
+        "image": "bridal_veil.webp",
+        "description": "Waterfall up Provo Canyon",
+        "paragraph": "Scenic waterfall with trails and shaded paths. Great views, picnic spot, and connection to other trails.",
+        "image_figure": "Bridal Veil At Night"
+    },
+    {
+        "name": "Hike the Y Trail",
+        "address": "N Terrace Dr, Provo, UT",
+        "image": "y_trail.webp",
+        "description": "Popular hike for all ages. Great view of Provo and Utah Lake",
+        "paragraph": "The Y trail is a dirt and gravel out and back trail with over 1000 feet in elevation gain, and 2.25 miles round trip from the trailhead to the top of the block and back. Take plenty of water and expect to get your heartrate up. Rattlesnakes have been seen on the trail so keep your eyes open.",
+        "image_figure": "Bird's eye view of the trail."
+    },
+    {
+        "name": "Provo Beach",
+        "address": "4801 N University Ave #210, Provo, UT",
+        "image": "provo_beach.webp",
+        "description": "Indoor fun center with bowling, indoor surfing, arcades, and ice cream.",
+        "paragraph": "Provo Beach Resort is a family fun center located in the shops at the Riverwoods. It is a great place to take the kids, particularly the teenagers, on a rainy day. They have a bunch of activities, many of them unique, including mini-golf style croquet, bowling, laser tag, a ropes course, and of course, the flowrider, which simulates surfing. ",
+        "image_figure": "Riding the Wave"
+    },
+    {
+        "name": "Provo Pioneer Village",
+        "address": "600 N 500 W, Provo, UT",
+        "image": "pioneer_village.webp",
+        "description": "Experience a pioneer village at this history museum with wood buildings.",
+        "paragraph": "The Provo Pioneer Village represents early Provo Utah, a frontier community settled in 1849 and existing in large part in isolation. The Pioneer Village contains original structures built by these pioneers, including log cabins, an adobe house, a granary, school, wood shop, corn crib, out-house, and more. ",
+        "image_figure": "Cabin and Wagon"
+    },
+
+]

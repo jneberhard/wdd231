@@ -20,14 +20,15 @@ function displayItems(data) {
         console.log(x)
         const card = document.createElement('div');
         card.classList.add('card');
+        card.addEventListener('click', () => showStuff(x));
         
         const photo = document.createElement('img')
         photo.src = x.path;
         photo.alt = `${x.level} Membership`;
-        photo.addEventListener('click', () => showStuff(x));
+        
         
         const title = document.createElement('h3');
-        title.textContent = x.level;
+        title.textContent = x.level + x.details;
 
         const starContainer = document.createElement("div");
         starContainer.classList.add("star-container");
