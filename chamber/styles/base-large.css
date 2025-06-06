@@ -59,11 +59,20 @@
     display: grid;
     column-gap: 10px;
 
-}
-#cards.listView section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-}
+    }
+    #cards.listView section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
+    .cards-container section img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+    .cards-container section img:hover {
+        transform: scale(1.10);
+        box-shadow: 9px 10px 18px rgba(0,0,0,0.3);
+        z-index: 3;
+    }
 
 }
 
@@ -76,4 +85,34 @@
     }
 
     
+}
+
+
+@media (min-width: 64rem) {
+
+    #discover-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "name name"
+        "image description"
+        "image address";
+    }
+    #discover-cards section button {
+        justify-self: center;
+    }
+    #discover-cards section img {
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+
+    }
+    .cards-container section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "name name"
+        "image description"
+        "image address";
+    }
+
 }

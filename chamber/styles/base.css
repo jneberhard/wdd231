@@ -184,7 +184,7 @@ main h1 {
 
 }
 
-#cards section, #spotlight2 section {
+#cards section, #spotlight2 section  {
     border: 2px solid black;
     background-color: var(--background-color);
     overflow: hidden;
@@ -193,11 +193,13 @@ main h1 {
 
 }
 
+
+
 #spotlight2 a {
     color: black;
 }
 
-#cards img {
+#cards img , #discover-cards img{
     box-sizing: border-box;
     max-width: 100%;
     height: auto;
@@ -205,6 +207,10 @@ main h1 {
     display: block;
     margin: 0 auto;
     padding: 10px;
+}
+
+#cards section, #discover-cards section{
+    text-align: center;
 }
 
 #cards h2, p {
@@ -404,6 +410,21 @@ form input, form select, form textarea {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+#learnMoreDialog {
+    width: 80%;
+    max-width: 600px;
+    padding: 2em;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: rgb(225,225,225);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    top: 5vh;
+    overflow-y: auto;
+    z-index: 1000;
+    position: fixed;
+
+}
+
 /* membership level section */
 
 #showHere {
@@ -452,6 +473,76 @@ form input, form select, form textarea {
     }
 }
 
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#discover-cards {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+
+
+.cards-container {
+    display: grid;
+    grid-template-areas:
+        "name"
+        "image"
+        "description"
+        "address";
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    background-color: #e4d6d6;
+    box-shadow: 0 12px 32px rgba(107, 90, 90, 0.15);
+    border: 5px solid black;
+}
+.cards-container section {
+    gap: 5px;
+    padding: 5px;
+    justify-content: center;
+    background-color: var(--background-color);
+    box-shadow: 0 12px 32px rgba(107, 90, 90, 0.15);
+    border: 5px solid black;
+}
+
+.cards-container div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+    font-size: 2rem;
+}
+
+.cards-container div img {
+    width: 100%;
+    grid-area: image;
+}
+
+.cards-container div p {
+    margin: 1rem 10px;
+    font-size: large;
+    grid-area: description;
+}
+
+.cards-container div address {
+    margin: 1rem 10px;
+    font-size: large;
+    grid-area: address;
+}
+
+.cards-container div button{
+    max-width: 200px;
+}
+ #discover-cards section button {
+        justify-self: center;
+        max-width: 200px;
+    }
 
 /*--------------------------- thankyou page ---------------*/
 
@@ -462,6 +553,50 @@ form input, form select, form textarea {
 #thankYou {
     text-align: center;
 }
+
+/*---------------------------------------------popup------------------------------*/
+
+.popup {
+    background-color: var(--light-background);
+    width: 300px;
+    padding:30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    display: block;
+
+}
+
+.popup h2 {
+    font-family: "Mulish";
+}
+
+.button {
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: var(--background-color);
+    font-size: 30px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+ .popup a {
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    background-color: var(--background-color);
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+ }
+ .hidden {
+    display: none;
+ }
 
 /* -----------------------------------------footer info ----------------------------------*/
 footer {
