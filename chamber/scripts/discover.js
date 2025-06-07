@@ -33,7 +33,7 @@ const displayDiscoverCompanies = (discoveries) => {
         address.textContent = discovery.address;
         description.textContent = discovery.description;
 
-        img.setAttribute('src', `images/${discovery.image}`);        
+        img.setAttribute('src', `images/${discovery.image}`);
         img.setAttribute('alt', discovery.image_figure);
         img.setAttribute('loading', 'lazy');
         figcaption.textContent = discovery.image_figure;
