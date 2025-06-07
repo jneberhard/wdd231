@@ -121,7 +121,20 @@ h2 {
     transform: rotateY(1080deg);
   }
 }
+/*  --------------------------------------HOME   MAIN --------------------------------------*/
 
+
+.card1 {
+    grid-template-columns: 1fr;
+    display: grid;
+    column-gap: 10px;
+    text-align: center;
+    
+}
+
+.card1 section {
+  border: 1px solid black;
+}
 
 
 ul.menuLinks {

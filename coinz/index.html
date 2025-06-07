@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>WDD231: Site Plan - Jim Eberhard</title>
     <script src="scripts/coinzbase.js" defer></script>
+    <script src="scripts/apisilver.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Coinz PSWD">
     <meta property="og:description" content="Online coin store and information. Collection of coins and information.">
@@ -46,47 +47,17 @@
         <button id="menu" aria-label="Toggle Navigation"></button>
         
     </header>
-    <main>        
-        
-        <h2>Site Name:</h2>
-        <p>Coinz PSWD</p>
-        <p>This name is about Coins from the Philadelpha (P), San Francisco (S), West Point (W) and Denver(D) mints.</p>
-        <h2>Site Purpose:</h2>
-        <div>
-            <p>Features of this site</p>
-            <ul>                
-                <li>Has current inventory for sale</li>
-                <li>Shows real-time silver and gold prices</li>
-                <li>Explanation of commemoratives</li>
-                <li>Contains a form to sign up for the monthly newsletter</li>
-            </ul>
-        <h2>Scenarios:</h2>
-            <ul>
-                <li>What can I order?</li>
-                <li>What does the shop want to buy?</li>
-                <li>How can I associate with others?</li>
-                <li>How do I stay up to date with trends?</li>
-                <li>I have some silver and gold, what is it worth?</li>
-            </ul>
-        <h2>Color Schema:</h2>
-        <ul>
-            <li id="paynes">Paynes Gray for background colors in header and footer with white text</li>
-            <li id="gold">Gold color used over white for accents - must be larger fonts</li>
-            <li id="purple">Dark purple Used for form and light blue background</li>
-        </ul>
-        <h2>Typography</h2>
-        <ul>
-            <li id="garamond">EB+Garamond - used for headers</li>
-            <li id="mulish">Mulish - used for form text</li>
-            <li id="noto">Noto+Serif - Used for nav </li>
-            <li id="roboto">Roboto - used for general text</li>
-        </ul>
-        <h2>Wireframes</h2>
-            <img src="images/wireframe_full_screen.jpg" alt="Jim Eberhard">
-            <img src="images/wireframe_mobile.jpg" alt="Jim Eberhard">
-
+    <main>     
+        <div class="card1">
+            <section>
+                <p>NEWSLETTER</p>
+            </section>
+            <section>
+                <p>Today's Gold Price: <span id="gold-price">Loading...</span></p>
+                <p>Today's Silver Price: <span id="silver-price">Loading...</span></p>
+                <p> FAQ, Silver O</p>
+            </section>        
         </div>
-
     </main>
     <footer>
         <div class="designer">

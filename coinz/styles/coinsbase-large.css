@@ -48,4 +48,12 @@
     #menu {
         display: none;
     }
-   
+    /*  --------------------------------------HOME   MAIN --------------------------------------*/
+
+
+    .card1 {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        column-gap: 10px;
+        text-align: center;
+}
