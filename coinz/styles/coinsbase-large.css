@@ -1,0 +1,51 @@
+@media only screen and (max-width: 60em) {
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+}
+
+
+
+@media only screen and (min-width: 40em) {
+    header {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #navMenu {
+        max-height: none;
+        overflow: visible;
+        max-height: 300px;
+        grid-column: span 1;
+        align-self: end;
+    }
+
+    ul.menuLinks {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            position: relative;
+            align-items: center;
+        }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+
+
+    #menu {
+        display: none;
+    }
+   
