@@ -52,8 +52,23 @@
 
 
     .card1 {
-        grid-template-columns: 1fr 1fr;
         display: grid;
-        column-gap: 10px;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5px;
         text-align: center;
+        margin: 0 auto;
+        max-width: 1200px;
+
+
+
+    }
+    .cards-container section img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+    .cards-container section img:hover {
+        transform: scale(1.10);
+        box-shadow: 9px 10px 18px rgba(0,0,0,0.3);
+        z-index: 3;
+    }
 }

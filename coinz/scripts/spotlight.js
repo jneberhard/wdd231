@@ -1,0 +1,53 @@
+const spotlightContainer = document.querySelector('#spotlight2');
+const coinzurl = 'data/coinz.json';
+
+
+
+async function getCoinSpotlight() {
+    const response = await fetch(coinzurl); // request
+    const data = await response.json(); // parse the JSON data
+    const shuffled = data.sort(() => Math.random() - 0.5); //shuffling the coins
+    const spotlightCoins = shuffled.slice(0, 4);  //chosing 4 coins
+    displaySpotlight(spotlightCoins);
+
+  }
+
+
+getCoinSpotlight();
+
+
+const displaySpotlight = (coins) => {
+    spotlightContainer.innerHTML = '';
+
+    coins.forEach((coin) => {
+      let card = document.createElement('section');
+      let name = document.createElement("h3");
+      let type = document.createElement('p');
+      let year = document.createElement('p');
+      let mint_mark = document.createElement('p');
+      let image = document.createElement('img');
+      let price = document.createElement("p");
+      
+
+
+      name.textContent = coin.name;
+      type.textContent = (`Type: ${coin.type}`);
+      year.textContent = (`Year: ${coin.year}`);
+      mint_mark.textContent = (`Mint Mark: ${coin.mint_mark}`);
+      price.textContent = `Price: $${parseFloat(coin.price_usd).toFixed(2)}`;
+
+
+      image.setAttribute('src', `images/${coin.image_url}.webp`);
+      image.setAttribute('alt', `Image for ${coin.name}`);
+      image.style.maxHeight = '100px';
+      image.style.width = 'auto';
+
+      card.appendChild(image);
+      card.appendChild(name);
+      card.appendChild(type);
+      card.appendChild(mint_mark);
+      card.appendChild(price);
+
+      spotlightContainer.appendChild(card);
+    });
+};

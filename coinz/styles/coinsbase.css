@@ -71,8 +71,9 @@ h1 {
 
 h2 {
     background-color: var(--background-color);
-    color: white;
     font-family: var(--font-garamond);
+    color: white;
+    border-radius: 8px;
 }
 
 #paynes {
@@ -123,17 +124,64 @@ h2 {
 }
 /*  --------------------------------------HOME   MAIN --------------------------------------*/
 
+#article h1{
+  color: White;
+  background-color: var(--background-color);
+  font-family: var(--font-garamond);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+#article h2 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+#article p{
+  text-align: left;
+}
+
+#article li {
+  list-style-type: none;
+}
+
+#goldApi {
+  border: 1px solid black;
+  background-color: var(--color-lightblue);
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#newsletterInvite {
+  background-color: var(--color-gold);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+
+}
+
+#signup {
+  cursor: pointer;
+  border-radius: 8px;
+}
 
 .card1 {
     grid-template-columns: 1fr;
     display: grid;
-    column-gap: 10px;
+    column-gap: 1px;
     text-align: center;
+    margin: 0;
     
 }
 
 .card1 section {
   border: 1px solid black;
+  margin: 0;
+  padding: 5px;
+  max-width: 100%;
+  width: 100%;
 }
 
 
@@ -147,7 +195,7 @@ ul.menuLinks {
 
 ul.menuLinks li {
   flex: 1;
-  width: 100;
+  width: 100%;
   margin: 5px 0;
   border: 1px solid black;
   background-color: var(--color-gold);
@@ -220,6 +268,101 @@ nav ul li a.active {
     font-size: 1.3em;
     text-underline-offset: 4px;
 }
+
+/*---------------for sale-----------------------------*/
+#selling h1{
+  color: var(--color-purple);
+  font-size: 50px;
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-areas:
+        "name"
+        "image"
+        "description"
+        "type"
+        "year"
+        "mint_mark"
+        "price"
+        "button";
+    grid-template-rows: auto auto 1fr auto auto auto auto auto;
+    padding: 1rem;
+    background-color: #e4d6d6;
+    box-shadow: 0 12px 32px rgba(107, 90, 90, 0.15);
+    border: 5px solid black;
+    max-width: 100%;
+}
+.cards-container section {
+    gap: 5px;
+    padding: 5px;
+    justify-content: center;
+    background-color: var(--background-color);
+    box-shadow: 0 12px 32px rgba(107, 90, 90, 0.15);
+    border: 5px solid black;
+}
+
+.cards-container h2 {
+    margin: 0.5rem 0;
+    grid-area: name;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.cards-container figure {
+  grid-area: image;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.cards-container img {
+    width: 100%;
+    grid-area: image;
+}
+
+.cards-container p {
+    margin: 1rem 10px;
+    font-size: large;
+    grid-area: description;
+    color: white;
+    text-align: center;
+    margin-top: 0.3rem;
+}
+
+.cards-container figcaption {
+  color: white;
+
+}
+
+
+.cards-container button{
+  grid-area: button;
+  align-self: center;
+  margin-top: auto;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+#coinz-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#faq p, ul {
+  text-align: left;
+}
+
+#faq ul {
+  list-style-type: none;
+
+}
+
+
 
 /* -----------------------------------------footer info ----------------------------------*/
 footer {

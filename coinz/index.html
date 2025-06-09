@@ -17,6 +17,7 @@
     <title>WDD231: Site Plan - Jim Eberhard</title>
     <script src="scripts/coinzbase.js" defer></script>
     <script src="scripts/apisilver.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Coinz PSWD">
     <meta property="og:description" content="Online coin store and information. Collection of coins and information.">
@@ -37,7 +38,7 @@
             <ul class="menuLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="forsale.html" title="For Sale">For Sale</a></li>
-                <li><a href="commemoratives.html" title="Commemoratives">Commemoratives</a></li>
+                <li><a href="commemoratives.html" title="Commemoratives">Newsletter</a></li>
             </ul>
         </nav>
         </section>
@@ -49,14 +50,124 @@
     </header>
     <main>     
         <div class="card1">
+
             <section>
-                <p>NEWSLETTER</p>
-            </section>
-            <section>
+                <div id="goldApi">
                 <p>Today's Gold Price: <span id="gold-price">Loading...</span></p>
                 <p>Today's Silver Price: <span id="silver-price">Loading...</span></p>
-                <p> FAQ, Silver O</p>
-            </section>        
+                </div>
+                <div  id="newsletterInvite">
+                    <button id="signup">
+                    Do you like our articles?<br><strong>Sign up</strong>for the newsletter today!!!!
+                    </button>                   
+                </div>
+                <div id="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <p><strong>Q:</strong> What does the PSWD mean in your name?<br><strong>A:</strong> They are the letters for the current US mints: Philadelphia, San Francisco, West Point, Denver</P>
+                    <p>-------</p>
+                    <p><strong>Q:</strong> What Are Coins Worth That You Get Back in Change?<br>
+                    <strong>A:</strong> As a <strong>general rule</strong>, coins you receive as change are worth their face value.<br>
+                    Exceptions: Rare or Collectible Coins<br>
+                    Some coins can be worth more due to their rarity, age, or unique features. Keep an eye out for:<br>
+                    <ul>
+                        <li><strong>Wheat pennies</strong> (minted before 1959)</li>
+                        <li><strong>Silver coins</strong> (dimes, quarters, and half dollars minted before 1965 contain 90% silver)</li>
+                        <li><strong>Error coins</strong> (like double strikes or misprints)</li>
+                        <li><strong>Low-mintage years</strong> (fewer coins produced, more valuable)</li>
+                    </ul>
+                    Also, look for the following:
+                    <ul>
+                        <li><strong>Unusual designs</strong> or older dates</li>
+                        <li><strong>Mint marks</strong> (like “S” for San Francisco, or missing ones)</li>
+                        <li><strong>Coins in excellent condition</strong> (little to no wear)</li>
+                    </ul>
+                    <p>-------</p>
+                    <p><strong>Q:</strong> Are coins a good investment?<br><strong>A:</strong> 
+                    Coins <strong>can</strong> be a good investment, but it depends on several factors:
+                    <ul>
+                        <li><strong>Collector Value:</strong> Rare, historic, or limited-edition coins often increase in value over time.</li>
+                        <li><strong>Precious Metal Content:</strong> Coins made of silver, gold, or platinum can be valuable based on metal prices.</li>
+                        <li><strong>Market Knowledge:</strong> Successful coin investing requires knowledge about grading, authenticity, and market trends.</li>
+                        <li><strong>Patience:</strong> Coin investments usually grow slowly and aren’t as liquid as stocks or bonds.</li>
+                        <li><strong>Risk:</strong> Like any investment, there is risk — not all coins appreciate, and some might lose value.</li>
+                    </ul>
+                    If you're interested in coin collecting or investing, it’s wise to research thoroughly or consult with a professional coin dealer or numismatist.
+
+
+                    
+
+                </div>
+                <section class="spotlight1">
+                    <h2>Featured Coins</h2>
+                <div id="spotlight2"></div>
+        </section>
+            </section>
+            <section>
+                <article id="article">
+                    <h1>Sense of the Cents</h1>
+                        <p>For more than a century, America’s lowest-denomination coins—the penny and the nickel—have sparked debates that go beyond pocket change. While they may seem insignificant in value, these small coins carry a larger story about national identity, economic efficiency, and the evolution of money itself.</p>
+
+                        <p>So what’s the real<em>“sense” of the cents?</em> Do these coins still make financial sense—or are they simply relics of a bygone era?</p>
+
+                        <h2>A Penny’s Worth: Then and Now</h2>
+                        <p>When the Lincoln cent was first minted in<strong>1909,</strong>one cent could buy a loaf of bread or a scoop of candy. The nickel, introduced in<strong>1866</strong>had even broader utility. But today, thanks to inflation, these coins buy very little—if anything at all.</p>
+                        <p>Yet they continue to be minted<strong>by the billions</strong>each year.</p>
+
+                        <p>In 2023 alone, the U.S. Mint produced over<strong>4 billion pennies,</strong> despite growing concerns about their <strong>cost, utility, and environmental impact.</strong></p>
+
+                        <h2>The Cost of Making Cents</h2>
+                        <p>Ironically, both the penny and the nickel<strong>cost more to produce</strong>than they are worth:</p>
+                        <ul>
+                        <li><strong>Penny</strong>: ~2.7¢ to make 1¢</li>
+                        <li><strong>Nickel</strong>: ~10.4¢ to make 5¢</li>
+                        </ul>
+                        <p>Together, these coins<strong>cost taxpayers millions of dollars annually,</strong>simply because the cost of raw materials—like copper, zinc, and nickel—has outpaced their face value.</p>
+
+                        <h2>Do We Still Use Them?</h2>
+                        <p>Many Americans rarely use small coins in daily life. Cash usage is declining, and when people do pay with coins, they often <em>leave pennies behind</em> in tip jars or “take a penny, leave a penny” trays.</p>
+
+                        <p>Retailers round prices, consumers round totals, and coin jars accumulate for years before being cashed in. While coins once played a vital role in everyday commerce, today their presence is often more<strong>habitual than helpful.</strong></p>
+
+                        <h2>Why Are They Still Around?</h2>
+                        <p>Despite their declining relevance, small coins persist—for a few key reasons:</p>
+                        <ul>
+                        <li><strong>Public sentiment:</strong>People are attached to coins that carry the image of<em>Abraham Lincoln</em>or<em>Thomas Jefferson.</em></li>
+                        <li><strong>Fear of rounding:</strong>Some worry that removing cents would lead to<em>price rounding</em>that subtly favors businesses.</li>
+                        <li><strong>Charity and tradition:</strong>Coins are still used in<em>donation drives,</em>educational projects, and coin collecting hobbies.</li>
+                        <li><strong>Industry lobbying:</strong>Metal suppliers and vending machine manufacturers have historically lobbied to <em>keep coins in circulation.</em></li>
+                        </ul>
+
+                        <h2>Making Sense of Modern Coinage</h2>
+                        <p>The debate over cents is really a broader conversation about how our society<strong>uses and values money.</strong> As digital payments, contactless cards, and mobile apps become the norm, physical cash—and coins in particular—play a<strong>shrinking role</strong>in transactions.</p>
+
+                        <p>Many other countries have already<strong>phased out small-denomination coins</strong>and moved to<em>rounding systems</em>for cash purchases. These changes were met with<strong>minimal disruption</strong>and considerable savings.</p>
+
+                        <h2>Looking Ahead: A Smarter System?</h2>
+                        <p>Here’s what a more efficient U.S. coin system could look like:</p>
+                        <ul>
+                        <li><strong>Eliminate the penny</strong> and possibly the nickel)</li>
+                        <li><strong>Round cash totals</strong>to the nearest 5 cents</li>
+                        <li><strong>Keep digital and card payments exact</strong></li>
+                        <li><strong>Use redesigned coins</strong>for special occasions (like the 2026 Semiquincentennial)</li>
+                        <li><strong>Focus production</strong>on useful denominations like the dime, quarter, and dollar coin</li>
+                        </ul>
+
+                        <h2>Conclusion: Finding the Sense in Cents</h2>
+                        <p>Small coins may seem trivial, but they carry weight—historically, symbolically, and economically. Whether we keep them, change them, or phase them out, the decision should be guided by what truly<strong>makes sense</strong>for our future.</p>
+
+                        <p>As we approach milestones like the<strong>250th anniversary of U.S. independence,</strong>perhaps it’s time to<strong>reevaluate not just how we use money—but how we value it.</strong></p>
+
+                        <hr>
+
+                        <h3>Related Articles</h3>
+                        <ul>
+                        <li><a href="#">Why the Penny May Soon Disappear</a></li>
+                        <li><a href="#">Should the Nickel Be Next? Rethinking Coinage Efficiency</a></li>
+                        <li><a href="#">What’s in Store for Coin Designs in 2026</a></li>
+                        </ul>
+
+                </article>
+            </section>      
         </div>
     </main>
     <footer>

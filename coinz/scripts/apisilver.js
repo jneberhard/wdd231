@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const goldPriceElement = document.getElementById("gold-price");
   const silverPriceElement = document.getElementById("silver-price");
-  const apiKey = "goldapi-7m8smbluu5ve-io";  // here is the apiKey 
+  const apiKey = //"goldapi-7m8smbluu5ve-io";  // here is the apiKey  - take away the // before the key to activate key
 
   function fetchPrices() {       // GOLD
     fetch("https://www.goldapi.io/api/XAU/USD", {
-      method: "GET",
-      headers: {
+      method: "GET", headers: {
         "x-access-token": apiKey,
         "Content-Type": "application/json"
       }
@@ -17,13 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => {
       console.error("Error fetching gold price:", error);
-      goldPriceElement.textContent = "Error loading";
+      goldPriceElement.textContent = "Error too many API calls today";
     });
 
     
     fetch("https://www.goldapi.io/api/XAG/USD", {    // SILVER
-      method: "GET",
-      headers: {
+      method: "GET", headers: {
         "x-access-token": apiKey,
         "Content-Type": "application/json"
       }
@@ -39,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
  
-  fetchPrices();    // Initial fetch on page load
+  //fetchPrices();    // Initial fetch on page load -- undo //
 
 
   setInterval(fetchPrices, 1800000);    // Update every half hour  
