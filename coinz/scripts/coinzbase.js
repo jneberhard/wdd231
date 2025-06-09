@@ -18,10 +18,13 @@ menuButton.addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const currentPage = location.pathname.split("/").pop();
-    document.querySelectorAll(".menuLinks a").forEach(link => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
+    let currentPath = window.location.pathname.split('/').pop().toUpperCase();
+    if (currentPath === "") currentPath = "index.html";
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(link => {
+        if (link.getAttribute("href").toUpperCase() === currentPath) {   //checks to see what page it's on
+            link.classList.add("active")
+        }
     });
 });
