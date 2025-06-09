@@ -16,3 +16,12 @@ menuButton.addEventListener("click", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = location.pathname.split("/").pop();
+    document.querySelectorAll(".menuLinks a").forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+});
