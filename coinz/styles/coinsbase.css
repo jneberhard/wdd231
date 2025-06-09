@@ -228,6 +228,13 @@ ul.menuLinks li {
     
 }
 
+.menuLinks a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: bold;
+  color: black;
+}
+
 .menuLinks a:hover {
     color: yellow;
 }
