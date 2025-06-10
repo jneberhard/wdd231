@@ -124,7 +124,7 @@ h2 {
 }
 /*  --------------------------------------HOME   MAIN --------------------------------------*/
 
-#article h1{
+.article h1{
   color: White;
   background-color: var(--background-color);
   font-family: var(--font-garamond);
@@ -133,16 +133,16 @@ h2 {
   margin-top: 0;
 }
 
-#article h2 {
+.article h2 {
   margin-top: 25px;
   margin-bottom: 20px;
 }
 
-#article p{
+.article p{
   text-align: left;
 }
 
-#article li {
+.article li {
   list-style-type: none;
 }
 
