@@ -27,4 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.add("active")
         }
     });
+
+
+
+    // click the sign up to get to the newslwetter page
+    const signupBtn = document.getElementById('signup');
+    if (signupBtn) {
+        signupBtn.addEventListener('click', () => {
+            window.location.href = 'newsletter.html';
+        });
+    }
+    
 });

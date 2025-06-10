@@ -370,6 +370,53 @@ nav ul li a.active {
 }
 
 
+/*----------------------sign-up--------------------------*/
+#newsletterSignup {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  background-color: #fefefe;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+#newsletterSignup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+}
+
+.required {
+    color: red;
+    font-weight: bolder;
+    font-size: larger;
+    margin-left: 4px;
+
+}
+.designOne {
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#newsletterHeader {
+  color: var(--color-purple);
+  font-size: 80px;
+  margin: 0;
+
+  
+}
+
+
+.spotlight1 {
+  background-color: var(--color-lightblue);
+}
 
 /* -----------------------------------------footer info ----------------------------------*/
 footer {
