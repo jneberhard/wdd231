@@ -276,6 +276,29 @@ nav ul li a.active {
     text-underline-offset: 4px;
 }
 
+.learnMoreBtn, #join-button1 {
+  background-color: var(--color-gold);
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.learnMoreBtn:hover,  #join-button1:hover  {
+  background-color: #b8860b;
+}
+
+#thankYou h1 {
+  background-color: var(--color-gold);
+  color: black;
+}
+
+#processing {
+  text-align: center;
+}
+
+#stories {
+  list-style-type: none;
+}
 /*---------------for sale-----------------------------*/
 #selling h1{
   color: var(--color-purple);
@@ -437,6 +460,10 @@ footer {
     font-weight: bold;
 }
 
+.submit, .visits {
+  font-size: 20px;
+}
+
 .info p {
     padding-left: 15px;
     color: white;
@@ -459,5 +486,4 @@ footer {
 .designer p {
     color: black;
     line-height: 1.4;
-
 }

@@ -26,31 +26,28 @@
 </head>
 <body>
     <header>
-        <section id="left">
+        <div id="left">
             <img src="images/silver_eagle.webp" alt="Silver Eagle" id="eagle">
-        </section>
-        <section id='center'>
+        </div>
+        <div id='center'>
             <h1>Coinz PSWD</h1>
             <h2>Coins, Silver, Gold</h2>
-            <p> </p>
-            
+            <p> </p>            
             <nav id="navMenu">
-            <ul class="menuLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="forsale.html" title="For Sale">For Sale</a></li>
-                <li><a href="newsletter.html" title="Newsletter">Newsletter</a></li>
-            </ul>
-        </nav>
-        </section>
-        <section id="right">
+                <ul class="menuLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="forsale.html" title="For Sale">For Sale</a></li>
+                    <li><a href="newsletter.html" title="Newsletter">Newsletter</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="right">
             <img src="images/philharmonic.webp" alt="Philharmonic">
-        </section>
-        <button id="menu" aria-label="Toggle Navigation"></button>
-        
+        </div>
+        <button id="menu" aria-label="Toggle Navigation"></button>        
     </header>
     <main>     
         <div class="card1">
-
             <section>
                 <div id="goldApi">
                 <p>Today's Gold Price: <span id="gold-price" class="price">Loading...</span></p>
@@ -63,7 +60,7 @@
                 </div>
                 <div id="faq">
                     <h2>Frequently Asked Questions</h2>
-                    <p><strong>Q:</strong> What does the PSWD mean in your name?<br><strong>A:</strong> They are the letters for the current US mints: Philadelphia, San Francisco, West Point, Denver</P>
+                    <p><strong>Q:</strong> What does the PSWD mean in your name?<br><strong>A:</strong> They are the letters for the current US mints: Philadelphia, San Francisco, West Point, Denver</p>
                     <p>-------</p>
                     <p><strong>Q:</strong> What Are Coins Worth That You Get Back in Change?<br>
                     <strong>A:</strong> As a <strong>general rule</strong>, coins you receive as change are worth their face value.<br>
@@ -97,10 +94,16 @@
                     
 
                 </div>
-                <section class="spotlight1">
+                <div class="spotlight1">
                     <h2>Featured Coins</h2>
-                <div id="spotlight2"></div>
-        </section>
+                    <div id="spotlight2"></div>
+                    
+                </div>
+                <dialog id="learnMoreDialog">
+                    <h2 id="dialogTitle"></h2>
+                    <div id="dialogContent"></div>
+                    <button id="closeDialog">Close</button>
+                </dialog>
             </section>
             <section>
                 <article class="article">
@@ -167,7 +170,7 @@
                         </ul>
 
                 </article>
-            </section>      
+            </section>
         </div>
     </main>
     <footer>
@@ -180,18 +183,17 @@
                 Provo, UT 84601<br>
                 (801) 373-5930
             </p>
+            <p><span class="submit">Number of Visits: </span><span class="visits"></span></p>
         </div>
         <div class="social">
             <a href="https://youtube.com" target="_blank">
-            <img src="images/youtube.webp" alt="X" loading="lazy"></a>
+            <img src="images/youtube.webp" alt="YouTube" loading="lazy"></a>
             <a href="https://x.com" target="_blank">
                 <img src="images/x.png" alt="X" loading="lazy"></a>
             <a href="https://www.linkedin.com" target="_blank">
                 <img src="images/linkedin.png" alt="LinkedIn" loading="lazy"></a>
             <a href="https://www.instagram.com" target="_blank">
                 <img src="images/instagram.jpg" alt="Instagram" loading="lazy"></a>
-
-
         </div>
 
     </footer>

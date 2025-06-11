@@ -1,3 +1,45 @@
+/*const goldPriceElement = document.getElementById("gold-price");
+const silverPriceElement = document.getElementById("silver-price");
+const apiKey = "goldapi-7m8smbluu5ve-io";  // API key
+
+fetch("https://www.goldapi.io/api/XAU/USD", {
+    headers: {
+        "x-access-token": apiKey,
+        "Content-Type": "application/json"
+    }
+})
+.then(response => response.json())
+.then(goldData => {
+    const goldPrice = goldData.price;
+    if (typeof goldPrice === "number") {
+        goldPriceElement.textContent = `$${goldPrice.toFixed(2)} USD`;
+    } else {
+        goldPriceElement.textContent = "Unavailable";
+    }
+
+    return fetch("https://www.goldapi.io/api/XAG/USD", {
+        headers: {
+            "x-access-token": apiKey,
+            "Content-Type": "application/json"
+        }
+    });
+})
+.then(response => response.json())
+.then(silverData => {
+    const silverPrice = silverData.price;
+    if (typeof silverPrice === "number") {
+        silverPriceElement.textContent = `$${silverPrice.toFixed(2)} USD`;
+    } else {
+        silverPriceElement.textContent = "Unavailable";
+    }
+})
+.catch(error => {
+    console.error("API error:", error);
+    goldPriceElement.textContent = "Error fetching prices";
+    silverPriceElement.textContent = "Error fetching prices";
+});
+*/
+
 document.addEventListener("DOMContentLoaded", () => {
     const goldPriceElement = document.getElementById("gold-price");
     const silverPriceElement = document.getElementById("silver-price");
@@ -80,4 +122,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
                 
-          

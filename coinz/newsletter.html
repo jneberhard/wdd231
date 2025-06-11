@@ -25,117 +25,123 @@
 </head>
 <body>
     <header>
-        <section id="left">
-            <img src="images/silver_eagle.webp" alt="Silver Eagle">
-        </section>
-        <section id='center'>
+        <div id="left">
+            <img src="images/silver_eagle.webp" alt="Silver Eagle" id="eagle">
+        </div>
+        <div id='center'>
             <h1>Coinz PSWD</h1>
             <h2>Coins, Silver, Gold</h2>
-            <p> </p>
-            
+            <p> </p>            
             <nav id="navMenu">
-            <ul class="menuLinks">
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="forsale.html" title="For Sale">For Sale</a></li>
-                <li><a href="newsletter.html" title="Newsletter">Newsletter</a></li>
-            </ul>
-        </nav>
-        </section>
-        <section id="right">
+                <ul class="menuLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="forsale.html" title="For Sale">For Sale</a></li>
+                    <li><a href="newsletter.html" title="Newsletter">Newsletter</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="right">
             <img src="images/philharmonic.webp" alt="Philharmonic">
-        </section>
+        </div>
         <button id="menu" aria-label="Toggle Navigation"></button>        
     </header>
     <main>
         <h1 id="newsletterHeader">Receive the Newsletter</h1>
         <div class="card1">
             <div>
-            <section id="newletterSignup">
-            <h2>Newsletter Signup</h2>
-            <p>* denotes required information</p>
-            <form method="GET" action="thankyou.html" class="designOne">
-                <label>First Name: <span class="required">*</span><input type="text"  name="first" required autocomplete="given-name" title="Your First Name"></label>
-                <p></p>
-                <label>Last Name: <span class="required">*</span><input type="text"  name="last" required autocomplete="family-name" title="Your Last Name"></label>
-                <p></p>
-                <label>Email: <span class="required">*</span><input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
-                <p></p>
-                <label>Where are you from? <input type="text" required name="organization"  autocomplete="organization" title="Where are you from?" placeholder="Your Organization Name" ></label>
-                <p></p>
-                <label for="interests" class="inline">What are you most interested in?<span class="required">*</span>
-                    <select name="interests" id="interests" required>
-                        <option value="" disabled selected>-</option>
-                        <option value="Gold">Gold</option>
-                        <option value="Silver">Silver</option>
-                        <option value="Bronze">Coins/Numismatisc</option>
-                        <option value="NP Membership">Currency</option>
-                    </select>
-                </label>
-                <p></p>
-                <label class="inline">Comments:
-                    <textarea name="description" id="description"  title="Description" placeholder="Tell us what you'd like to see or how we can help you." ></textarea>
-                </label>
-                <input type="hidden" name="timestamp" id="timestamp">
-                <p></p>
-                <input type="submit" value="Newsletter Signup" id="join-button1">
-            </form>
-            <section class="spotlight1">
-                    <h2>Featured Coins</h2>
-                <div id="spotlight2"></div>
-            </section>
+                <section id="newletterSignup">
+                <h2>Newsletter Signup</h2>
+                <p>* denotes required information</p>
+                    <form method="GET" action="thankyou.html" class="designOne">
+                        <label>First Name: <span class="required">*</span><input type="text"  name="first" required autocomplete="given-name" title="Your First Name"></label>
+                        <p></p>
+                        <label>Last Name: <span class="required">*</span><input type="text"  name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                        <p></p>
+                        <label>Email: <span class="required">*</span><input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                        <p></p>
+                        <label>Where are you from? <input type="text" required name="organization"  autocomplete="organization" title="Where are you from?" placeholder="Your Organization Name" ></label>
+                        <p></p>
+                        <label for="interests" class="inline">What are you most interested in?<span class="required">*</span>
+                            <select name="interests" id="interests" required>
+                                <option value="" disabled selected>-</option>
+                                <option value="Gold">Gold</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Bronze">Coins/Numismatisc</option>
+                                <option value="NP Membership">Currency</option>
+                            </select>
+                        </label>
+                        <p></p>
+                        <label class="inline">Comments:
+                            <textarea name="description" id="description"  title="Description" placeholder="Tell us what you'd like to see or how we can help you." ></textarea>
+                        </label>
+                        <input type="hidden" name="timestamp" id="timestamp">
+                        <p></p>
+                        <input type="submit" value="Newsletter Signup" id="join-button1">
+                    </form>
+                </section>
+                <section class="spotlight1">
+                        <h2>Featured Coins</h2>
+                    <div id="spotlight2"></div>
+                </section>
             </div>
-        <section>
-            <article id="article">
-                <h1>Featured Article from the Newsletter:<br>
-                Why the Penny May Soon Disappear</h1>
-                <p>For over 100 years, the penny—officially known as the Lincoln cent—has been a fixture in American currency. Yet in recent years, the smallest U.S. coin has come under growing scrutiny, with economists, lawmakers, and consumers alike questioning its continued existence.</p>
+            <section>
+                <article class="article">
+                    <h1>Featured Article from the Newsletter:<br>
+                    Why the Penny May Soon Disappear</h1>
+                    <p>For over 100 years, the penny—officially known as the Lincoln cent—has been a fixture in American currency. Yet in recent years, the smallest U.S. coin has come under growing scrutiny, with economists, lawmakers, and consumers alike questioning its continued existence.</p>
 
-                <p>So why is the penny on the chopping block? And what would happen if the U.S. eliminated it altogether? Here’s a closer look at the debate.</p>
+                    <p>So why is the penny on the chopping block? And what would happen if the U.S. eliminated it altogether? Here’s a closer look at the debate.</p>
 
-                <h2>The Case Against the Penny</h2>
+                    <h2>The Case Against the Penny</h2>
 
-                <h3>1. It Costs More Than It’s Worth</h3>
-                <p>The most frequently cited argument is simple economics: it costs more than a penny to make a penny. As of recent U.S. Mint reports, each 1¢ coin costs nearly 2.7 cents to produce, due to the cost of raw materials, manufacturing, and distribution.</p>
-                <p>That means the U.S. government loses millions annually just by making the coin.</p>
+                    <h3>1. It Costs More Than It’s Worth</h3>
+                    <p>The most frequently cited argument is simple economics: it costs more than a penny to make a penny. As of recent U.S. Mint reports, each 1¢ coin costs nearly 2.7 cents to produce, due to the cost of raw materials, manufacturing, and distribution.</p>
+                    <p>That means the U.S. government loses millions annually just by making the coin.</p>
 
-                <h3>2. It’s Barely Useful</h3>
-                <p>The penny has lost most of its purchasing power. There’s almost nothing you can buy with a single cent, and even when prices include them, consumers often leave them behind or store them in jars.</p>
-                <p>In everyday transactions, pennies often slow down lines at stores and create minor inefficiencies without adding much value.</p>
+                    <h3>2. It’s Barely Useful</h3>
+                    <p>The penny has lost most of its purchasing power. There’s almost nothing you can buy with a single cent, and even when prices include them, consumers often leave them behind or store them in jars.</p>
+                    <p>In everyday transactions, pennies often slow down lines at stores and create minor inefficiencies without adding much value.</p>
 
-                <h3>3. Environmental Impact</h3>
-                <p>Because they’re made mostly of zinc with a copper coating, producing billions of pennies a year requires significant mining, energy use, and emissions. Eliminating the penny would slightly reduce the environmental footprint of coin production.</p>
+                    <h3>3. Environmental Impact</h3>
+                    <p>Because they’re made mostly of zinc with a copper coating, producing billions of pennies a year requires significant mining, energy use, and emissions. Eliminating the penny would slightly reduce the environmental footprint of coin production.</p>
 
-                <h3>4. Other Countries Have Moved On</h3>
-                <p>Several developed nations—including Canada, Australia, New Zealand, and the U.K.—have already discontinued their lowest-denomination coins. They rely on rounding systems for cash transactions (e.g., rounding to the nearest 5 cents), while card and digital payments remain exact.</p>
-                <p>The result? Minimal disruption, and often positive public reception.</p>
+                    <h3>4. Other Countries Have Moved On</h3>
+                    <p>Several developed nations—including Canada, Australia, New Zealand, and the U.K.—have already discontinued their lowest-denomination coins. They rely on rounding systems for cash transactions (e.g., rounding to the nearest 5 cents), while card and digital payments remain exact.</p>
+                    <p>The result? Minimal disruption, and often positive public reception.</p>
 
-                <h2>Arguments for Keeping the Penny</h2>
-                <p>Not everyone agrees the penny should go. Some of the arguments in favor of keeping it include:</p>
-                <ul>
-                <li><strong>Rounding concerns:</strong> Critics fear prices might be rounded up more often than down, disproportionately affecting low-income consumers.</li>
-                <li><strong>Charitable donations:</strong> Many small-donation drives rely on pennies—like "penny wars" in schools or coin drives for nonprofits.</li>
-                <li><strong>Historical significance:</strong> The penny features Abraham Lincoln, one of America’s most revered presidents, and has become a symbol of tradition.</li>
-                <li><strong>Public sentiment:</strong> Polls often show that a majority of Americans like the penny and feel nostalgic about it, even if they don’t use it frequently.</li>
-                </ul>
+                    <h2>Arguments for Keeping the Penny</h2>
+                    <p>Not everyone agrees the penny should go. Some of the arguments in favor of keeping it include:</p>
+                    <ul>
+                    <li><strong>Rounding concerns:</strong> Critics fear prices might be rounded up more often than down, disproportionately affecting low-income consumers.</li>
+                    <li><strong>Charitable donations:</strong> Many small-donation drives rely on pennies—like "penny wars" in schools or coin drives for nonprofits.</li>
+                    <li><strong>Historical significance:</strong> The penny features Abraham Lincoln, one of America’s most revered presidents, and has become a symbol of tradition.</li>
+                    <li><strong>Public sentiment:</strong> Polls often show that a majority of Americans like the penny and feel nostalgic about it, even if they don’t use it frequently.</li>
+                    </ul>
 
-                <h2>What Would Happen If We Got Rid of It?</h2>
-                <p>If the U.S. were to discontinue the penny, it would likely follow the Canadian model:</p>
-                <ul>
-                <li>Cash transactions would be rounded to the nearest 5¢.</li>
-                <li>Electronic payments (credit/debit) would remain unchanged.</li>
-                <li>Old pennies could still be used indefinitely but would slowly disappear from circulation.</li>
-                <li>Retailers would have time to update pricing and point-of-sale systems accordingly.</li>
-                </ul>
-                <p>In short, the penny would fade away gradually, not vanish overnight.</p>
+                    <h2>What Would Happen If We Got Rid of It?</h2>
+                    <p>If the U.S. were to discontinue the penny, it would likely follow the Canadian model:</p>
+                    <ul>
+                    <li>Cash transactions would be rounded to the nearest 5¢.</li>
+                    <li>Electronic payments (credit/debit) would remain unchanged.</li>
+                    <li>Old pennies could still be used indefinitely but would slowly disappear from circulation.</li>
+                    <li>Retailers would have time to update pricing and point-of-sale systems accordingly.</li>
+                    </ul>
+                    <p>In short, the penny would fade away gradually, not vanish overnight.</p>
 
-                <h2>Legislative Status</h2>
-                <p>Efforts to eliminate the penny have been proposed in Congress multiple times, but none have passed. The idea has bipartisan support in principle, but resistance from special interest groups (like zinc producers) and public attachment have kept the coin alive—for now.</p>
+                    <h2>Legislative Status</h2>
+                    <p>Efforts to eliminate the penny have been proposed in Congress multiple times, but none have passed. The idea has bipartisan support in principle, but resistance from special interest groups (like zinc producers) and public attachment have kept the coin alive—for now.</p>
 
-                <h2>The Bottom Line</h2>
-                <p>The penny is a classic example of economic nostalgia vs. practical reality. While it holds historic and symbolic value, its actual utility in the 21st century is questionable. As inflation continues to erode its worth and digital transactions dominate, the penny may eventually go the way of the half-cent—into the pages of history.</p>
-                <p>Whether that happens soon or not, one thing is certain: the debate over the penny is far from over.</p>
-            </article>
-        </section>
+                    <h2>The Bottom Line</h2>
+                    <p>The penny is a classic example of economic nostalgia vs. practical reality. While it holds historic and symbolic value, its actual utility in the 21st century is questionable. As inflation continues to erode its worth and digital transactions dominate, the penny may eventually go the way of the half-cent—into the pages of history.</p>
+                    <p>Whether that happens soon or not, one thing is certain: the debate over the penny is far from over.</p>
+                </article>
+            </section>
+        </div>
+        <dialog id="learnMoreDialog">
+            <h2 id="dialogTitle"></h2>
+            <div id="dialogContent"></div>
+            <button id="closeDialog">Close</button>
+        </dialog>
     </main>
         <footer>
         <div class="designer">
@@ -147,18 +153,19 @@
                 Provo, UT 84601<br>
                 (801) 373-5930
             </p>
+            <p><span class="submit">Number of Visits: </span><span class="visits"></span></p>
         </div>
         <div class="social">
             <a href="https://youtube.com" target="_blank">
-            <img src="images/youtube.webp" alt="X" loading="lazy"></a>
+            <img src="images/youtube.webp" alt="YouTube" loading="lazy"></a>
             <a href="https://x.com" target="_blank">
                 <img src="images/x.png" alt="X" loading="lazy"></a>
             <a href="https://www.linkedin.com" target="_blank">
                 <img src="images/linkedin.png" alt="LinkedIn" loading="lazy"></a>
             <a href="https://www.instagram.com" target="_blank">
                 <img src="images/instagram.jpg" alt="Instagram" loading="lazy"></a>
-
-
         </div>
 
     </footer>
+</body>
+</html>
