@@ -129,7 +129,7 @@ img {
 }
 
 
-.article h1{
+#articletop {
   color: White;
   background-color: var(--background-color);
   font-family: var(--font-garamond);
