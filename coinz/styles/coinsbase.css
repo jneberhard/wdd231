@@ -136,6 +136,7 @@ img {
   border-radius: 8px;
   margin-bottom: 20px;
   margin-top: 0;
+  font-size: 35px;
 }
 
 .article h2 {
@@ -492,3 +493,5 @@ footer {
     color: black;
     line-height: 1.4;
 }
+
+
