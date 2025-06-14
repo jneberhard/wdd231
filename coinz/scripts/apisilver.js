@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const apiKey = "b545fbbd3bf34b167c67b05f64e4a92a";
   const storageKey = "metalPrices";
-  const maxAge = 120 * 60 * 1000; // 120 minutes cache duration
+  const maxAge = 720 * 60 * 1000; // 720 minutes cache duration -- 12 hours -- limited API calls only - only 100 per month.
 
   // Check localStorage cache
   const saved = localStorage.getItem(storageKey);
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateDisplay(data) {
     goldPriceElement.textContent =
-      typeof data.gold === "number" ? `$${data.gold.toFixed(2)} USD` : "Unavailable";
+      typeof data.gold === "number" ? `$${data.gold.toFixed(2)} USD` : "Unavailable - exceeded API call limit";
 
     silverPriceElement.textContent =
       typeof data.silver === "number" ? `$${data.silver.toFixed(2)} USD` : "Unavailable";
