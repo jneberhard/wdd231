@@ -143,7 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
         updateDisplay(cachedData);
         return; // Use cached data if not expired
       }
-    } catch {
+    }
+    catch {
       // If JSON parse fails, ignore and fetch new data
     }
   }
