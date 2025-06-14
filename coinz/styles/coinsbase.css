@@ -123,6 +123,11 @@ h2 {
   }
 }
 /*  --------------------------------------HOME   MAIN --------------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 .article h1{
   color: White;
@@ -476,7 +481,7 @@ footer {
 
 .social img {
     height: 100px;
-    width: 100px;
+    width: auto;
     padding: 10px;
   }
 .social a {

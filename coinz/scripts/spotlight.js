@@ -55,8 +55,8 @@ const displaySpotlight = (coins) => {
 
       image.setAttribute('src', `images/${coin.image_url}.webp`);
       image.setAttribute('alt', `Image for ${coin.name}`);
-      image.style.maxHeight = '100px';
-      image.style.width = 'auto';
+      //image.style.maxHeight = '100px';
+      //image.style.width = 'auto';
 
       card.appendChild(image);
       card.appendChild(name);
