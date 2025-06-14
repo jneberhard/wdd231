@@ -128,7 +128,7 @@ img {
 }
 
 
-#articletop {
+#articletop, .article h1 {
   color: White;
   background-color: var(--background-color);
   font-family: var(--font-garamond);
@@ -136,6 +136,10 @@ img {
   margin-bottom: 20px;
   margin-top: 0;
 
+}
+
+#articletop {
+  font-size: 35px;
 }
 
 .article h2 {
