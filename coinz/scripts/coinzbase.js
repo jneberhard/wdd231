@@ -13,27 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentPage === "") currentPage = "index.html";
     currentPage = currentPage.toUpperCase();
 
-    const links = document.querySelectorAll("nav ul li a");
+    const navlinks = document.querySelectorAll("nav ul li a");
 
-    links.forEach(link => {
+    navlinks.forEach(link => {
         const linkHref = link.getAttribute("href").toUpperCase();
         if (linkHref === currentPage) {
             link.classList.add("active");
         }
     });
-
-
-    let currentPath = window.location.pathname.split('/').pop().toUpperCase();
-    if (currentPath === "") currentPath = "index.html";
-    const navLinks = document.querySelectorAll('nav ul li a');
-
-    navLinks.forEach(link => {
-        if (link.getAttribute("href").toUpperCase() === currentPath) {   //checks to see what page it's on
-            link.classList.add("active")
-        }
-    });
-
-
 
     // click the sign up to get to the newslwetter page
     const signupBtn = document.getElementById('signup');
@@ -43,8 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-
     /// for the number of visits
     const visitsDisplay = document.querySelector(".visits");    //   Initialize display element variable
     let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 1589;   //  Get the stored VALUE for the numVisits-ls KEY in localStorage if it exists. 
@@ -53,13 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(`Current visit count from localStorage: ${numVisits}`);
 
     // Determine if this is the first visit or display the number of visits. We wrote this example backwards in order for you to think deeply about the logic.
-    if (numVisits !== 0)
-    {
-        visitsDisplay.textContent = numVisits;
-    }
-    else
-    {
-        visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
+    if (visitsDisplay) {
+        if (numVisits !== 0) {
+            visitsDisplay.textContent = numVisits;
+        }
+        else {
+            visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
+        }
     }
 
 
