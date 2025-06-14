@@ -55,9 +55,7 @@ header {
   max-width: 100%;
   height: auto;
 }
-#center h1 {
-  font-size: 50px;
-}
+
 #center h2 {
   text-align: center;
   font-size: 35px;
@@ -67,6 +65,7 @@ h1 {
   color: white;
   text-align: center;
   font-family: var(--font-garamond);
+  font-size: 50px;
 }
 
 h2 {
@@ -136,7 +135,7 @@ img {
   border-radius: 8px;
   margin-bottom: 20px;
   margin-top: 0;
-  font-size: 35px;
+
 }
 
 .article h2 {
@@ -436,10 +435,7 @@ form input, form select, form textarea {
 
 #newsletterHeader {
   color: var(--color-purple);
-  font-size: 80px;
-  margin: 0;
-
-  
+  margin: 0;  
 }
 
 
